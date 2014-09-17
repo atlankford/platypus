@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+body {
+
+}
+
+html {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+
+q, blockquote {
+    quotes: none
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none
+}
+
+a img {
+    border: none
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block
+}
+
+html, body, #map-canvas {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+#map-canvas{
+    z-index: 200;
+}
+
+#plot-button {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    bottom: 92px;
+    z-index: 900;
+    border-radius: 0px; !important;
+
+
+}
+
+
+.plot-me-button {
+
+}
+
+.plot-me-button:hover {
+
+}
+
+.brand-logo {
+    position: fixed;
+    top: 5px;
+    left: 50px;
+    z-index: 1000;
+
+}
+
+#stop-button, #stop-following-button{
+    visibility: hidden;
+    position: fixed;
+    bottom: 92px;
+    z-index: 900;
+    border-radius: 0px; !important;
+    width: 100%;
+}
+
+.desktop-ad{
+    width: 100%;
+    position: fixed;
+    bottom: -1px;
+    z-index: 0;
+}
+.mobile-ad{
+    width: 100%;
+    position: fixed;
+    bottom: -1px;
+    z-index: -3000;
+}
+
+
+.overlay{
+    padding: 13%;
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 300;
+    background-color: #5B7AF3;
+    opacity:0.75;
+    font-weight: 500;
+
+}
+
+.blank-overlay{
+    padding: 13%;
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: #ffffff;
+    font-weight: 500;
+}
+
+#overlay-welcome{
+    font-size: 40px;
+
+
+}
+#overlay-tag{
+    font-size: 30px;
+
+}
+#overlay-brand{
+    font-size: 100px;
+
+
+}
+#overlay-button{
+    background-color: #5B7AF3; !important;
+    opacity: 1.0; !important;
+    border-radius: 5px; !important;
+    border: 2px solid #ffffff; !important;
+    font-size: 25px; !important;
+    line-height: 22px; !important;
+    font-weight: 500; !important;
+    text-transform: uppercase; !important;
+    color: white; !important;
+    height: 80px; !important;
+    width: 200px; !important;
+    visibility: hidden;
+}
+
+.btn-primary, .btn-danger, .btn-success{
+    border-radius: 2px; !important;
+}
+
+#share{
+    top: 16px;
+    visibility: hidden;
+    position: fixed;
+    right: 10px;
+    z-index: 900;
+    border-radius: 4px; !important;
+    width: 50px;
+    font-size: 24px;
+}
+
+#share-link-input{
+    line-height: 1.5;
+
+
+}
+
+#share-link{
+    font-size: 14px;
+    color: #5B7AF3;
+
+}
+#finding-message{
+    visibility: hidden;
+}
+.pad{
+    padding: 20px;
+}
+
+
+
+
+
