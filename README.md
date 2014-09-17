@@ -1,5 +1,6 @@
 platypus - the snapchat of real-time geolocation
 
+<!--
 
 //Todo
 -add indexed db to store user info
@@ -81,8 +82,9 @@ USER POINT OF ENTRY
 	    						*create share info
 	    *user stops broadcast
 	    	    	
-</pre>
 
+
+-->
 
 
 
