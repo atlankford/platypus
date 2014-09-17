@@ -1,5 +1,5 @@
 platypus - the snapchat of real-time geolocation
-========
+
 
 //Todo
 -add indexed db to store user info
@@ -9,18 +9,18 @@ platypus - the snapchat of real-time geolocation
 -fix google ads
 -fix getlocation callbacks and promises
 
--*launch*
+launch
 -----------------------------------------------------------------------------------------------------------
 
 PLAT Pseudocode
 
-	||  KEY  ||
+	KEY 
 	?  represents a question for routing algorithm.  Usually an if conditional
 	-  response to if conditional
 	() function or method 
 	*  represents user action.  typically a start or stop.  Can be system action like 	 display a button
 	
-\
+
 USER POINT OF ENTRY
 ?Is user here to follow or are they here to view the map?
 	-user is here to follow
@@ -81,7 +81,7 @@ USER POINT OF ENTRY
 	    						*create share info
 	    *user stops broadcast
 	    	    	
-
+</pre>
 
 
 
