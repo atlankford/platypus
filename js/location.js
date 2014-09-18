@@ -22,12 +22,13 @@ var firebaseUrl = "https://truk.firebaseio.com/";
 var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
-var parentDomain = "http://adamlankford.me/map/";
+var parentDomain = "http://localhost:8080/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
 var message;
 var followMode;
+var mapLock;
 var textMessage = "Someone wants to share their location with you on PLAT.  Check it out at ";
 var emailMessage = "Someone wants to share their location with you on PLAT.  Check it out at ";
 //Map styles string
@@ -142,35 +143,30 @@ var share = function () {
     $('#myModal2').modal('show');
 
     var shareLink = parentDomain + "?" + uniqueId;
+    var twitterLink = "http://twitter.com/share?text=Check%20my%20location%20on%20PLAT%20&url="+ shareLink + '&hashtags=PLAT';
+
 
 //    document.getElementById("share-link-input").value = shareLink;
 
     document.getElementById("share-link").innerHTML = shareLink;
+    document.getElementById("tweet").setAttribute('href',twitterLink) ;
 
+    $('.popup').click(function(event) {
+        var width  = 575,
+            height = 400,
+            left   = ($(window).width()  - width)  / 2,
+            top    = ($(window).height() - height) / 2,
+            url    = shareLink,
+            opts   = 'status=1' +
+                ',width='  + width  +
+                ',height=' + height +
+                ',top='    + top    +
+                ',left='   + left;
 
-// remove any previous clone
-    $('#twitter-share').empty();
+        window.open(url, 'twitter', opts);
 
-// create a clone of the twitter share button template
-    var clone = $('#twitter-share').clone();
-
-// fix up our clone
-    clone.removeAttr("style"); // unhide the clone
-    clone.attr("data-url", shareLink);
-    clone.attr("data-size", "large");
-    clone.attr("class", "twitter-share-button");
-    clone.attr("via", "@PLAT");
-    clone.attr("hashtags", "#PLAT");
-    clone.attr("data-text", "I'm broadcasting my location on PLAT. ** Check it out");
-
-
-// copy cloned button into div that we can clear later
-    $('#twitter-share').append(clone);
-
-// reload twitter scripts to force them to run, converting a to iframe
-    $.getScript("http://platform.twitter.com/widgets.js");
-
-//    document.getElementById("twitter-share").setAttribute('data-url', shareLink);
+        return false;
+    });
 
 
 }
@@ -182,13 +178,10 @@ var share = function () {
 /* Initializes Google Maps */
 var initializeMap = function () {
 
-//    if(latitude == " "){
-//        var loc = new google.maps.LatLng(30.3369, -81.6614);
-//    }
-//    else{
+
     // Get the location as a Google Maps latitude-longitude object
     var loc = new google.maps.LatLng(latitude, longitude);
-//    }
+
 
 
     // Create the Google Map
@@ -205,18 +198,7 @@ var initializeMap = function () {
         overviewMapControl: false
     });
 
-    // Create a draggable circle centered on the map
-//        var circle = new google.maps.Circle({
-//            strokeColor: "#6D3099",
-//            strokeOpacity: 0.7,
-//            strokeWeight: 1,
-//            fillColor: "#B650FF",
-//            fillOpacity: 0.35,
-//            map: map,
-//            center: loc,
-//            radius: ((radiusInKm) * 1000),
-//            draggable: true
-//        });
+
 
 }
 
@@ -243,7 +225,7 @@ var initializeFollowMap = function () {
         // Create the Google Map
         map = new google.maps.Map(document.getElementById("map-canvas"), {
             center: loc,
-            zoom: 10,
+            zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             styles: mapStyles,
             panControl: false,
@@ -378,6 +360,7 @@ var stopBroadcast = function () {
     document.getElementById("plot-button").style.visibility = "visible";
     document.getElementById("stop-button").style.visibility = "hidden";
     document.getElementById("share").style.visibility = "hidden";
+    document.getElementById("lock").style.visibility = "hidden";
 
 
     //removes user location from database
@@ -417,6 +400,7 @@ var startBroadcast = function (x,y) {
 
                 //change broadcast button
                 document.getElementById("share").style.visibility = "visible";
+                document.getElementById("lock").style.visibility = "visible";
 
                 document.getElementById("plot-button").style.visibility = "hidden";
                 document.getElementById("stop-button").style.visibility = "visible";
@@ -486,6 +470,8 @@ var init = function () {
     if (window.location.href.slice(parentDomainLength, parentDomainLength + 1) == '?') {
         //resets the broadcast button
         document.getElementById("finding-message").style.visibility = "visible";
+        document.getElementById("loading").style.visibility = "visible";
+
         document.getElementById("overlay-button").style.visibility = "hidden";
 
 //        ****for testing link redirect******
@@ -507,6 +493,8 @@ var init = function () {
 
                 document.getElementById("overlay").style.visibility = "hidden";
                 document.getElementById("finding-message").style.visibility = "hidden";
+                document.getElementById("loading").style.visibility = "hidden";
+
 
                 geoListen();
 
@@ -604,6 +592,7 @@ function createUserMarker(user) {
     var content = "Loan Number: ";
     var infowindow = new google.maps.InfoWindow()
 
+     var directionsLink = 'https://www.google.com/maps/@' + user.l[0] + ',' + user.l[1];
 
     console.log(marker);
     var contentString = '<div id="content">'+
@@ -615,7 +604,7 @@ function createUserMarker(user) {
         '<div id="bodyContent">'+
         '<p> ' + user.message +
         '</p>'+ '<br>' +
-        '<p><a href="#">'+
+        '<p><a href="'+ directionsLink +'" target="_blank">'+
         'Get Directions to here</a> '+
         '</p>'+
         '</div>'+
@@ -678,8 +667,25 @@ var enterSite = function () {
     document.getElementById("plot-button").style.visibility = "visible";
     document.getElementById("overlay").style.visibility = "hidden";
     document.getElementById("overlay-button").style.visibility = "hidden";
+    document.getElementById("desktop-ad").style.zIndex = 400;
+
+
 
 }
+
+var lock = function(){
+    if(mapLock){
+        mapLock = false;
+        console.log(mapLock);
+
+    }
+    else if(!mapLock){
+        mapLock = true;
+        console.log(mapLock);
+    }
+}
+
+
 
 
 

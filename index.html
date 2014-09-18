@@ -127,28 +127,53 @@
     <H1 class="text-center animated bounceIn" id="overlay-brand">PLAT</H1>
     <br><br>
     <h4 id="overlay-tag" class="text-center animated fadeIn">Share your location Anonymously.</h4>
-    <br><br><br><br>
-    <h2 class="text-center animated infinate pulse"  id="finding-message">Please wait, finding your broadcast...</h2>
+
+
+    <div class="spinner" id="loading">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+    <h2 class="text-center"  id="finding-message">Please wait, finding your broadcast...</h2>
+
     <button  class="btn text-center center-block animated flipInX" id="overlay-button" onclick="enterSite()">Try it Out</button>
 </div>
 
 <!-- Buttons -->
+<div class="fill-width">
+    <button id="plot-button" class="btn plot-me-button btn-primary animated flipInX " data-toggle="modal" data-target="#myModal" >
+        Broadcast
+    </button>
 
-<button id="plot-button" class="btn plot-me-button btn-primary animated flipInX center-block" data-toggle="modal" data-target="#myModal" >
-    Start Broadcasting
-</button>
-
-<button id="stop-button" class="btn plot-me-button btn-danger animated infinite pulse center-block" onclick="stopBroadcast()">
-    Stop Broadcasting
-</button>
+    <button id="stop-button" class="btn plot-me-button btn-danger animated infinite pulse text-center" onclick="stopBroadcast()">
+        Stop
+    </button>
 
 
-<button id="stop-following-button" class="btn plot-me-button btn-danger animated infinite pulse center-block" onclick="stopFollowing()">
-    Following
-</button>
+    <button id="stop-following-button" class="btn plot-me-button btn-danger animated infinite pulse text-center" onclick="stopFollowing()">
+        Following
+    </button>
 
-<button type="button" id="share" class="btn btn-primary animated fadeIn" onclick="share()"><span class="glyphicon glyphicon-share-alt"></span>
-</button>
+    <button type="button" id="share" class="btn btn-primary animated fadeIn" onclick="share()"><span class="glyphicon glyphicon-share-alt"></span>
+    </button>
+    <button type="button" id="lock" class="btn btn-primary animated fadeIn" onclick="lock()"><span class="glyphicon glyphicon-lock"></span>
+    </button>
+</div>
 
 
 <!-- MAP -->
@@ -159,23 +184,23 @@
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- PLAT - Desktop Map -->
     <ins class="adsbygoogle" id="adsbygoogle"
-    style="display:inline-block;width:100%;height:90px;"
-    data-ad-client="ca-pub-6317675980892409"
-    data-ad-slot="6848699968"></ins>
+         style="display:inline-block;width:100%;height:90px;"
+         data-ad-client="ca-pub-6317675980892409"
+         data-ad-slot="6848699968"></ins>
     <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
 
 
 <!--<div class="mobile-ad center-block text-center" id="mobile-ad">-->
-    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
-    <!--<!-- PLAT - desktop wide -->
-    <!--<ins class="adsbygoogle"-->
-         <!--style="display:inline-block;width:320px;height:50px"-->
-         <!--data-ad-client="ca-pub-6317675980892409"-->
-         <!--data-ad-slot="8046231564"></ins>-->
-    <!--<script>   (adsbygoogle = window.adsbygoogle || []).push({});</script>-->
+<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--<!-- PLAT - desktop wide -->
+<!--<ins class="adsbygoogle"-->
+<!--style="display:inline-block;width:320px;height:50px"-->
+<!--data-ad-client="ca-pub-6317675980892409"-->
+<!--data-ad-slot="8046231564"></ins>-->
+<!--<script>   (adsbygoogle = window.adsbygoogle || []).push({});</script>-->
 <!--</div>-->
 
 
@@ -241,6 +266,9 @@
                     </div>
                     <div class="btn-group">
                         <button type="button" onclick="textLink()" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Text</button>
+                    </div>
+                    <div class="btn-group">
+                        <a type="button"  id="tweet" href="http://twitter.com/share?text=This%20is%20so%20easy" target="_blank" class="btn btn-primary"><i class="fa fa-twitter"></i>Twitter </a>
                     </div>
 
                 </div>
