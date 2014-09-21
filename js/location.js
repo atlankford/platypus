@@ -22,7 +22,7 @@ var firebaseUrl = "https://truk.firebaseio.com/";
 var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
-var parentDomain = "http://localhost:8080/";
+var parentDomain = "http://adamlankford.me/platypus/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
