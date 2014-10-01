@@ -1,0 +1,49 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+
+
+
+<!-- Top Navbar-->
+<div class="navbar" >
+    <div class="navbar-inner" id="map-navbar" >
+        <div class="left">
+            <a href="#" data-panel="left" class="link icon-only open-panel"><i class="fa fa-navicon fa-2x"></i></a>
+        </div>
+        <div class="center sliding"></div>
+        <div class="right" id="share-button">
+            <a href="share.html" class="item-link">
+                <div class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title"><i class="fa  fa-share-alt fa-2x"></i> </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="map" class="page">
+        <div class="page-content"  id="map-page">
+
+            <div id="map-canvas"></div>
+
+            <div class="toolbar tabbar" id="map-tabbar">
+                <div class="toolbar-inner">
+                    <a href="broadcast.html" id="broadcast-button"  class=" broadcast-button animated fadeIn">START</a>
+
+                    <a onclick="stopBroadcast()" id="stop-broadcast-button" class=" broadcast-button animated infinite pulse fadeIn">STOP</a>
+
+                    <a onclick="stopFollowing()" id="stop-following-button" class=" broadcast-button animated infinite pulse fadeIn">STOP</a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>

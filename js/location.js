@@ -22,32 +22,130 @@ var firebaseUrl = "https://truk.firebaseio.com/";
 var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
-var parentDomain = "http://adamlankford.me/platypus/";
+var usersOnMap;
+var parentDomain = "http://localhost:8080/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
 var message;
-var followMode;
+var followMode = false;
 var mapLock;
 var textMessage = "Someone wants to share their location with you on PLAT.  Check it out at ";
 var emailMessage = "Someone wants to share their location with you on PLAT.  Check it out at ";
+var start;
+var end;
+var iconURL = "img/marker/markers/animals/adium.png";
+
 //Map styles string
 var mapStyles = [
-    {"featureType": "road", "elementType": "geometry", "stylers": [
-        {"lightness": 100},
+    {"featureType": "road", "elementType": "labels", "stylers": [
+        {"visibility": "simplified"},
+        {"lightness": 20}
+    ]},
+    {"featureType": "administrative.land_parcel", "elementType": "all", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {"featureType": "landscape.man_made", "elementType": "all", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {"featureType": "transit", "elementType": "all", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {"featureType": "road.local", "elementType": "labels", "stylers": [
         {"visibility": "simplified"}
     ]},
-    {"featureType": "water", "elementType": "geometry", "stylers": [
-        {"visibility": "on"},
-        {"color": "#C6E2FF"}
+    {"featureType": "road.local", "elementType": "geometry", "stylers": [
+        {"visibility": "simplified"}
     ]},
-    {"featureType": "poi", "elementType": "geometry.fill", "stylers": [
-        {"color": "#C5E3BF"}
+    {"featureType": "road.highway", "elementType": "labels", "stylers": [
+        {"visibility": "simplified"}
     ]},
-    {"featureType": "road", "elementType": "geometry.fill", "stylers": [
-        {"color": "#D1D1B8"}
+    {"featureType": "poi", "elementType": "labels", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {"featureType": "road.arterial", "elementType": "labels", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {"featureType": "water", "elementType": "all", "stylers": [
+        {"hue": "#a1cdfc"},
+        {"saturation": 30},
+        {"lightness": 49}
+    ]},
+    {"featureType": "road.highway", "elementType": "geometry", "stylers": [
+        {"hue": "#f49935"}
+    ]},
+    {"featureType": "road.arterial", "elementType": "geometry", "stylers": [
+        {"hue": "#fad959"}
     ]}
 ];
+
+//------------------------App stuff--------------------------------------------
+// Initialize your app
+var myApp = new Framework7();
+
+// Export selectors engine
+var $$ = Dom7;
+
+// Add view
+var mainView = myApp.addView('.view-main', {
+    dynamicNavbar: true,
+    domCache: true,
+    uniqueHistory: true
+
+});
+
+
+$$(document).on('ajaxStart', function () {
+    myApp.showIndicator();
+});
+$$(document).on('ajaxComplete', function () {
+    myApp.hideIndicator();
+});
+
+
+// Option 2. Using live 'pageInit' event handlers for each page
+$$(document).on('pageInit', '.page[data-page="map"]', function (e) {
+
+    if (followMode) {
+        $$('#broadcast-button').hide();
+
+        $$('#stop-following-button').show();
+
+    }
+
+    mainView.showNavbar();
+
+    $$('stop-broadcast-button').hide();
+
+    startMap();
+
+
+})
+
+// Option 2. Using live 'pageInit' event handlers for each page
+$$(document).on('pageInit', '.page[data-page="share"]', function (e) {
+
+    share();
+
+})
+
+
+// Pull to refresh content
+var ptrContent = $$('.pull-to-refresh-content');
+
+// Add 'refresh' listener on it
+ptrContent.on('refresh', function (e) {
+    // Emulate 2s loading
+    setTimeout(function () {
+
+        startApp();
+
+        // When loading done, we need to reset it
+        myApp.pullToRefreshDone();
+
+    }, 2000);
+});
+
 
 //-------------------------End Global Variables--------------------------------------------
 
@@ -69,7 +167,7 @@ var geolocationCallback = function (location) {
     latitude = location.coords.latitude;
     longitude = location.coords.longitude;
     center = [latitude, longitude];
-
+    $$('#launch-button').show();
     console.log("Retrieved user # " + uniqueId + "'s location: [" + latitude + ", " + longitude + "]");
 
 }
@@ -112,65 +210,76 @@ var geoUpdatedLocationCallback = function (location) {
 
     }
 }
-var emailLink = function(){
-    $('#emailModal').modal('show');
-    $('#myModal2').modal('hide');
-}
-var textLink = function(){
-    $('#textModal').modal('show');
-    $('#myModal2').modal('hide');
-}
-
-var sendEmail = function(x){
-    $('#emailModal').modal('hide');
-
-    console.log(x);
-    firebaseRef.child('email').push({id: uniqueId, message: emailMessage, link: parentDomain + '?' + uniqueId, email: x.value})
+var emailLink = function () {
 
 }
-var sendText = function(x){
-    $('#textModal').modal('hide');
+var textLink = function () {
 
-    console.log(x);
+}
 
-    firebaseRef.child('text').push({id: uniqueId, message: textMessage, link: parentDomain + '?' + uniqueId, text: x.value})
+var sendEmail = function (x) {
+
+    console.log("sending email to " + x.value);
+
+    firebaseRef.child('email').push({id: uniqueId, message: emailMessage, link: parentDomain + '#' + uniqueId, email: x.value});
+
+    mainView.goBack();
+
+
+    myApp.addNotification({
+        title: 'PLAT',
+        message: 'An email with your broadcast link has been sent to ' + x.value
+    });
+
+    x = null;
+
+}
+var sendText = function (x) {
+
+    console.log("sending text to " + x.value);
+
+    firebaseRef.child('text').push({id: uniqueId, message: textMessage, link: parentDomain + '#' + uniqueId, text: x.value});
+
+    mainView.goBack();
+
+
+    myApp.addNotification({
+        title: 'PLAT',
+        message: 'A text message with your broadcast link has been sent to ' + x.value
+    });
+
+    x = null;
 
 }
 
 var share = function () {
 
-    //hide modal
-    $('#myModal2').modal('show');
 
-    var shareLink = parentDomain + "?" + uniqueId;
-    var twitterLink = "http://twitter.com/share?text=Check%20my%20location%20on%20PLAT%20&url="+ shareLink + '&hashtags=PLAT';
+    var shareLink = parentDomain + "#" + uniqueId;
 
-
-//    document.getElementById("share-link-input").value = shareLink;
+    var twitterLink = "http://twitter.com/share#text=Check%20my%20location%20on%20PLAT%20&url=" + shareLink + '&hashtags=PLAT';
 
     document.getElementById("share-link").innerHTML = shareLink;
-    document.getElementById("tweet").setAttribute('href',twitterLink) ;
+    document.getElementById("tweet").setAttribute('href', twitterLink);
 
-    $('.popup').click(function(event) {
-        var width  = 575,
+    $('.popup').click(function (event) {
+        var width = 575,
             height = 400,
-            left   = ($(window).width()  - width)  / 2,
-            top    = ($(window).height() - height) / 2,
-            url    = shareLink,
-            opts   = 'status=1' +
-                ',width='  + width  +
+            left = ($(window).width() - width) / 2,
+            top = ($(window).height() - height) / 2,
+            url = shareLink,
+            opts = 'status=1' +
+                ',width=' + width +
                 ',height=' + height +
-                ',top='    + top    +
-                ',left='   + left;
+                ',top=' + top +
+                ',left=' + left;
 
         window.open(url, 'twitter', opts);
 
         return false;
     });
 
-
 }
-
 
 /*****************/
 /*  GOOGLE MAPS  */
@@ -178,16 +287,13 @@ var share = function () {
 /* Initializes Google Maps */
 var initializeMap = function () {
 
-
     // Get the location as a Google Maps latitude-longitude object
     var loc = new google.maps.LatLng(latitude, longitude);
-
-
 
     // Create the Google Map
     map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: loc,
-        zoom: 10,
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles: mapStyles,
         panControl: false,
@@ -197,58 +303,51 @@ var initializeMap = function () {
         streetViewControl: false,
         overviewMapControl: false
     });
-
-
+    console.log("map function ran")
 
 }
 
+
+//TODO add check to see if broadcast exists
+function broadcastExistsCallback(id, exists) {
+    if (exists) {
+
+        buildFollowMap();
+
+    } else {
+
+        myApp.alert('Sorry, that broadcast is no longer active!', 'PLAT', function () {
+            window.location.href = parentDomain;
+        });
+    }
+}
+
+function checkIfBroadcastExists(id) {
+
+    firebaseRef.child(id).once('value', function (snapshot) {
+        var exists = (snapshot.val() !== null);
+        broadcastExistsCallback(id, exists);
+    });
+
+}
+
+
 var initializeFollowMap = function () {
 
-    var start = window.location.href.indexOf('?');
-    var end = window.location.href.length;
+    start = window.location.href.indexOf('#');
+    end = window.location.href.length;
 
-    console.log(window.location.href + "     start # is " + start + "and end # is "+ end);
+    console.log(window.location.href + "     start # is " + start + "and end # is " + end);
 
     platId = window.location.href.slice(start + 1, end).toUpperCase();
 
     console.log(platId)
 
-    firebaseRef.child(platId).once('value', function (dataSnapshot) {
-
-        plat = dataSnapshot.val();
-
-        latitude = plat.l[0];
-        longitude = plat.l[1];
-
-        // Get the location as a Google Maps latitude-longitude object
-        var loc = new google.maps.LatLng(plat.l[0], plat.l[1]);
-        // Create the Google Map
-        map = new google.maps.Map(document.getElementById("map-canvas"), {
-            center: loc,
-            zoom: 20,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            styles: mapStyles,
-            panControl: false,
-            zoomControl: false,
-            mapTypeControl: false,
-            scaleControl: false,
-            streetViewControl: false,
-            overviewMapControl: false
-        });
-
-    }, function (err) {
-        alert("Something went wrong")
-    });
-
-
+    checkIfBroadcastExists(platId);
 
 };
 
 var updateFollowMap = function () {
-    var start = window.location.href.indexOf('?');
-    var end = window.location.href.length;
-
-    platId = window.location.href.slice(start + 1, end).toUpperCase();
 
     //get user at location from database
     firebaseRef.child(platId).once("value", function (dataSnapshot) {
@@ -261,28 +360,19 @@ var updateFollowMap = function () {
         // Get the location as a Google Maps latitude-longitude object
         var loc = new google.maps.LatLng(plat.l[0], plat.l[1]);
 
+
         map.setCenter(loc);
 
     });
 };
 
 var geoListen = function () {
-    var usersOnMap = {};
+    usersOnMap = {};
 
-//    if(latitude = " "){
-//        var geoQuery = geoFire.query({
-//            center: [30.3369, -81.6614],
-//            radius: radiusInKm
-//        });
-//    }
-//    else{
     var geoQuery = geoFire.query({
         center: [latitude, longitude],
         radius: radiusInKm
     });
-//    }
-
-
 
     var onReadyRegistration = geoQuery.on("ready", function () {
         console.log("Page has loaded and fired all other events for initial data");
@@ -301,7 +391,7 @@ var geoListen = function () {
         firebaseRef.child(key).once("value", function (dataSnapshot) {
             // Get the vehicle data from the Open Data Set
             user = dataSnapshot.val();
-            user.message
+//            user.message
 
             user.id = key;
 
@@ -335,9 +425,17 @@ var geoListen = function () {
         console.log("platID is " + platId);
 
 
-        if (key == platId){
-            stopFollowing();
-            alert("User at " + key + " is no longer broadcasting")
+        if (key == platId) {
+
+            $$('#stop-following-button').hide();
+
+            myApp.addNotification({
+                title: 'PLAT',
+                message: 'That broadcast is no longer active.',
+                onClose: function () {
+                    stopFollowing();
+                }
+            });
         }
 
     });
@@ -356,12 +454,7 @@ var geoListen = function () {
 
 var stopBroadcast = function () {
 
-    //resets the broadcast button
-    document.getElementById("plot-button").style.visibility = "visible";
-    document.getElementById("stop-button").style.visibility = "hidden";
-    document.getElementById("share").style.visibility = "hidden";
-    document.getElementById("lock").style.visibility = "hidden";
-
+    $$('#share-button').hide();
 
     //removes user location from database
     firebaseRef.child(uniqueId).remove();
@@ -370,9 +463,13 @@ var stopBroadcast = function () {
     //clears interval that get user's new location every 30 seconds
     clearInterval(updateCurrentUserLocation);
 
+    $$('#stop-broadcast-button').hide();
+    $$('#broadcast-button').show();
+
+
 }
 
-var startBroadcast = function (x,y) {
+var startBroadcast = function (x, y) {
 
     x = x.value.replace(' ', '_');
     message = y.value;
@@ -382,39 +479,31 @@ var startBroadcast = function (x,y) {
     if (uniqueId.length == 0) {
         //show alert
         console.log("error length is == 0");
+        myApp.alert('Please enter a broadcast handle.')
 
 
     }
     else if (uniqueId.length > 14) {
         //show alert
         console.log("error length is > 14");
+        myApp.alert('Please enter a broadcast handle less than 14 characters.')
+
 
     }
-    // else if(uniqueId contains ".", "#", "$", "[", or "]") {}
+    //TODO
+    // REGEX else if(uniqueId contains ".", "#", "$", "[", or "]") {}
     else {
+
         firebaseRef.once('value', function (snapshot) {
+
             if (!snapshot.hasChild(uniqueId)) {
 
-
                 //start broadcast
-
-                //change broadcast button
-                document.getElementById("share").style.visibility = "visible";
-                document.getElementById("lock").style.visibility = "visible";
-
-                document.getElementById("plot-button").style.visibility = "hidden";
-                document.getElementById("stop-button").style.visibility = "visible";
-                document.getElementById("stop-button").innerHTML = "Stop Broadcast #" + uniqueId;
-
-
-                //hide modal
-                $('#myModal').modal('hide');
 
                 // Get the current user's location
                 getLocation();
 
                 addUserToDatabase();
-
 
                 //set up timer to get user's new location every 10 seconds
                 updateCurrentUserLocation = setInterval(function () {
@@ -425,22 +514,24 @@ var startBroadcast = function (x,y) {
 
             }
             else {
-                alert('Someone is already using that key')
+                myApp.alert('Someone is already using that key')
             }
+
+            mainView.goBack();
+            $$('#share-button').show();
+            $$('#stop-broadcast-button').show();
+            $$('#broadcast-button').hide();
+
         });
 
     }
-
 
 
 }
 
 var startFollowing = function () {
 
-    //change broadcast button
-    document.getElementById("stop-following-button").style.visibility = "visible";
-    document.getElementById("stop-following-button").innerHTML = "Stop Following Broadcast #" + platId;
-
+    geoListen();
     //set up timer to get user's new location every 10 seconds
     updateFollowUserLocation = setInterval(function () {
 
@@ -453,92 +544,78 @@ var startFollowing = function () {
 
 var stopFollowing = function () {
 
-    //resets the broadcast button
-    document.getElementById("plot-button").style.visibility = "visible";
-    document.getElementById("stop-following-button").style.visibility = "hidden";
 
     //clears interval that get user's new location every 30 seconds
     clearInterval(updateFollowUserLocation);
+
     window.location.href = parentDomain;
 
 }
 
 
-//initial page load method
-var init = function () {
+var startApp = function () {
 
-    if (window.location.href.slice(parentDomainLength, parentDomainLength + 1) == '?') {
-        //resets the broadcast button
-        document.getElementById("finding-message").style.visibility = "visible";
-        document.getElementById("loading").style.visibility = "visible";
+    getLocation();
 
-        document.getElementById("overlay-button").style.visibility = "hidden";
+    setTimeout(function () {
 
-//        ****for testing link redirect******
-//        console.log("http://localhost:8080/sfVehicles/?1410711974760");
-//        console.log(parentDomain + ":" + parentDomainLength);
-//        console.log(window.location.href.slice(parentDomainLength, parentDomainLength + 1));
-//        console.log(window.location.href.slice(parentDomainLength + 1, parentDomainLength + 14));
+        if (latitude === undefined) {
 
-        followMode = true;
+            myApp.alert('Please allow the browser to use your location', 'PLAT', function () {
+                getLocation();
 
+            });
+        }
 
+    }, 6000)
 
-        setTimeout(function () {
+};
 
-            //build map following at id in url
-            initializeFollowMap();
+var startMap = function () {
 
-            setTimeout(function () {
+    initializeMap();
+    geoListen();
 
-                document.getElementById("overlay").style.visibility = "hidden";
-                document.getElementById("finding-message").style.visibility = "hidden";
-                document.getElementById("loading").style.visibility = "hidden";
-
-
-                geoListen();
-
-                startFollowing();
-
-
-
-            }, 3000)
-
-        }, 5000)
-
-
-    }
-    else {
-
-        document.getElementById("overlay-button").style.visibility = "visible";
-
-
-        //get user location then builds map and listens to database
-        getLocation();
-
-        setTimeout(function () {
-            //build map now that you have user location
-            initializeMap();
-
-            //Starts listening to database changes
-            geoListen();
-
-        }, 5000)
-
-
-    }
 }
 
 
-//load the page and map
+//load the page
 window.onload = function () {
-// detectBrowser();
-    init();
+
+    if (isFollow()) {
+
+        $$("#finding-broadcast").show();
+
+        setTimeout(function () {
+
+            initializeFollowMap();
+
+
+        }, 5000)
+    }
+    else {
+        startApp();
+    }
+
 }
 
 //--------------------------------------------------------
 //Helper Methods
 //--------------------------------------------------------
+
+var isFollow = function () {
+
+    if (window.location.href.slice(parentDomainLength, parentDomainLength + 1) == '#') {
+        followMode = true;
+        return true;
+    }
+    else {
+        return false;
+    }
+
+
+};
+
 
 /* Returns true if the two inputted coordinates are approximately equivalent */
 var coordinatesAreEquivalent = function (coord1, coord2) {
@@ -564,9 +641,9 @@ function addUserToDatabase() {
 
     geoFire.set(uniqueId, [latitude, longitude]).then(function () {
 
-        console.log("User # " + uniqueId + "'s location has been added to the database");
+        console.log("User # " + uniqueId + "'s location has been added to the database NEW MESSAGE");
 
-        firebaseRef.child(uniqueId).update({"message" : message});
+        firebaseRef.child(uniqueId).update({'message': message, 'iconUrl': iconURL});
 
         // When the user disconnects from Firebase (e.g. closes the app, exits the browser),
         // remove their GeoFire entry
@@ -579,35 +656,33 @@ function addUserToDatabase() {
 /* Adds a marker for the user to the map */
 function createUserMarker(user) {
 
-    console.log("creating marker for new user at " + user.l[0] + "," + user.l[0]);
+    console.log("creating marker for at url' " + user.iconUrl + "new user at " + user.l[0] + "," + user.l[0]);
 
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(user.l[0], user.l[1]),
         optimized: true,
-        icon: 'img/marker/pin.png',
+        icon: user.iconUrl,
         map: map,
         title: user.id
 
     });
-    var content = "Loan Number: ";
-    var infowindow = new google.maps.InfoWindow()
 
-     var directionsLink = 'https://www.google.com/maps/@' + user.l[0] + ',' + user.l[1];
+    var content = "Loan Number: ";
+
+
+//    var directionsLink = 'https://www.google.com/maps/@' + user.l[0] + ',' + user.l[1];
 
     console.log(marker);
-    var contentString = '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
+    var contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
         '<h1 id="firstHeading" class="firstHeading"><b>' +
         user.id +
-        '</b></h1><br>'+
-        '<div id="bodyContent">'+
+        '</b></h1><br>' +
+        '<div id="bodyContent">' +
         '<p> ' + user.message +
-        '</p>'+ '<br>' +
-        '<p><a href="'+ directionsLink +'" target="_blank">'+
-        'Get Directions to here</a> '+
-        '</p>'+
-        '</div>'+
+        '</p>' + '<br>' +
+        '</div>' +
         '</div>';
 
     var infowindow = new google.maps.InfoWindow({
@@ -615,8 +690,8 @@ function createUserMarker(user) {
     });
 
 
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map,marker);
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
     });
 
 
@@ -662,33 +737,69 @@ var detectBrowser = function () {
     }
 }
 
-var enterSite = function () {
-    //change broadcast button
-    document.getElementById("plot-button").style.visibility = "visible";
-    document.getElementById("overlay").style.visibility = "hidden";
-    document.getElementById("overlay-button").style.visibility = "hidden";
-    document.getElementById("desktop-ad").style.zIndex = 400;
 
-
-
-}
-
-var lock = function(){
-    if(mapLock){
+var lock = function () {
+    if (mapLock) {
         mapLock = false;
         console.log(mapLock);
 
     }
-    else if(!mapLock){
+    else if (!mapLock) {
         mapLock = true;
         console.log(mapLock);
     }
 }
 
+var setIcon = function (icon) {
+    var x = icon.childNodes[1].childNodes[0];
+    iconURL = x.src;
+    document.getElementById('broadcast-icon').setAttribute("src", iconURL);
+
+    mainView.goBack();
+
+};
 
 
+var buildFollowMap = function () {
+
+    firebaseRef.child(platId).once('value', function (dataSnapshot) {
+
+        plat = dataSnapshot.val();
+
+        latitude = plat.l[0];
+        longitude = plat.l[1];
+
+        // Get the location as a Google Maps latitude-longitude object
+        var loc = new google.maps.LatLng(plat.l[0], plat.l[1]);
+        // Create the Google Map
+        map = new google.maps.Map(document.getElementById("map-canvas"), {
+            center: loc,
+            zoom: 18,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: mapStyles,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            streetViewControl: false,
+            overviewMapControl: false
+        });
+
+        $$("#finding-broadcast").hide();
+
+        mainView.loadPage('map.html');
 
 
+        setTimeout(function () {
+
+            startFollowing();
+
+        }, 3000)
 
 
+    }, function (err) {
+        alert("Something went wrong")
+    });
+
+}
 

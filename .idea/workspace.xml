@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1010cf75-b2b6-42b2-bf3b-06ed45a5d09c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/1496x2048.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/1536x2008.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/320x460.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/640x1096.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/640x920.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/748x1024.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/splash/768x1004.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/Camera.app.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/accerciser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/adium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/alien.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/amule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-bat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-beaver.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-blowfish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-bumble_bee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-cat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-cow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-dog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-dolphin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-dragon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-elephant.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-elk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-gaur.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-giraffe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-hamster_face.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-hippo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-kitten_cute_toon_character_t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/animals-owl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/armagetron_advanced.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/avahi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/babelfish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/battle_for_wesnoth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/beryl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/bitlbee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/bitrocket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/blobwars.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/bluefish-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/bluefish-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/bubbros.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/cartoon-platypus-teal-clipart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/cat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/ceferino.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/chromium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/comix-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/crystal_smiley.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/devil_bat.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/distributions-freebsd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/distributions-freedos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/distributions-lea_linux.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/edit-bomb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/edit-clear-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/edit-find-9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/etherape.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-angel-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-angel-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-angel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-angry-yelling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-angry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-confused.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-cool.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-crying-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-crying.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-devil-grin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-devil-sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-devilish-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-devilish.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-embarrassed-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-embarrassed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-glasses.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-grin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-kiss-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-kiss-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-kiss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-laugh-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-laugh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-monkey-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-monkey.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-plain-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-plain-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-plain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-raspberry-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-raspberry-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-raspberry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sad-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sad-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sad-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-sleeping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-big-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-big-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-big-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile-big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-smirk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-supprised.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-surprise-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-surprise-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-surprise.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-tired.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-tongue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-uncertain-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-uncertain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-uneasy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-wink-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-wink-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-wink-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-wink.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-worried.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/face-yawn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ae.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-af.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ai.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-al.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-am.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-an.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-as.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-at.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-au.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-aw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-az.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ba.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-be.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bj.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-br.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-by.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-bz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ca.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ci.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-co.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cx.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cyprus_northern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-cz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-de.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-dj.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-dk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-dm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-do.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-dz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ec.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ee.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-eg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-er.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-es.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-et.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fj.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-fr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ge.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-green.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-gy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-hk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-hn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-hr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ht.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-hu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-id.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-il.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-in.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-iq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ir.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-is.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-it.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-jm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-jo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-jp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ke.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ki.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-km.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ky.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-kz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-la.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ls.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-lv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ly.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ma.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-md.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ml.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mq.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ms.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mx.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-my.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-mz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-na.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ne.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-nf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ng.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ni.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-nl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-no.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-np.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-nr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-nu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-nz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-om.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-pw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-py.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-qa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-rs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ru.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-rw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-se.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-si.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-so.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-soviet_union.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-st.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-sz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-td.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-th.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tibet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tj.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-to.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tt.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-tz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ua.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ug.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-us.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-uy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-uz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-va.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-vc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ve.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-vg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-vi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-vn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-vu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-wf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ws.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-ye.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/flag-yellow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-za.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-zm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/world/flag-zw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/food-egg_blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/fork.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/freecol-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/freemind.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/freepascal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/frets_on_fire.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/gaim-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/gaim-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/games-hint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/games-solve.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/gbonds.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/gcompris.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/gconf-editor-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/ghost-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/ghost-game_basic_guy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/ghost.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/gnoemoe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/gnome-robots.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/go-bottom-5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/go-bottom-6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/go-jump-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/guarddog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/human_skull.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-f7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-f7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-calendar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-comment.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-gender.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-gender.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-name.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-name.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-password.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-password.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-tel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-toggle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-toggle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/img/i-form-url.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/img/i-form-url.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/imagemagick.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/insert-object.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/irc-operator.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/katuberling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/kget-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/kmines-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/kolf-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/konquest-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/kopete-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/koshell.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/logo_cp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/lostirc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/memory-rom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/monsterz_graphics.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/nexenta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/oddmuse.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/orbital-eunuchs-sniper.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/orc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/people-block_figure-fireman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/people-boy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/people-delivery.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/people-girl-anime_with_silver_hair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/people-kid_head.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/phex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/preferences-system-performance.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/preferences-web-browser-cookies-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/rating.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/rocks_n_diamonds.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/roll.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/shaman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/supertuxkart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/transportation-hummer_01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/transportation-motorcycle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/transportation-plane-business_jet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/transportation-plane-cessna.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/trigger.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/tux.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/animals/tux_paint.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/transportation/ufraw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/video-televison-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/random/virussafe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/wine-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/people/xblast.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/xeyes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/emoji/yahoo_messenger-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/marker/markers/markers/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_emoji.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/about.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/jade/about.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/jade/about.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/jade/about.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/templates/about.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/accordion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/accordion.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/animals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/atlankford.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/badges.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/broadcast.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/clicks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/colors.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/contacts.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/content-block.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/disabled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/dom7-ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/dom7-intro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/dom7-methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/dom7-outro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/dom7-utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/email.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/emoji.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/f7-intro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/f7-outro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/fast-clicks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/firebase.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/templates/form.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/forms-handler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/forms.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/js/framework7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/framework7.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/js/framework7.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/framework7.rtl.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.themes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/framework7.themes.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.themes.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/global-events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/grid.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/jade/index.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/jade/index.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/jade/index.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/templates/index.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/infinite-scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/intro.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/left-page-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/left-page-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/jade/left-page-1.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/jade/left-page-1.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/left-page-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/left-page-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/jade/left-page-2.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/jade/left-page-2.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/lists.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/login-screen.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/map.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/markers.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/messagebar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/messagebar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/messages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/messages.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/modals.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/modals.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/modules.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/css/my-app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/css/my-app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/css/my-app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/css/my-app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/my-app/my-app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/js/my-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/js/my-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/js/my-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/js/my-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/my-app/my-app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/less/my-app.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/less/my-app.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/less/my-app.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/navbars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/notifications.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/notifications.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/pages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/pages.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/panels.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/panels.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/people.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/photo-browser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/photo-browser.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platypus2.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/preloader.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/proto-device.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/proto-plugins.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/proto-support.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/pull-to-refresh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/pull-to-refresh.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/push-state.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/random.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/searchbar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/searchbar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/services.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/dist/services.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/services.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/services.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/services.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view-panel/jade/services.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/split-view/jade/services.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/examples/tab-bar/jade/services.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/templates/services.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/share.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/slider.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/smart-select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/sortable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/statusbar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/swipeout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/tabs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/tabs.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/template7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/text.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/toolbars-pages.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/toolbars.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transportation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/twitter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/views.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/less/views.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/wrap-end.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/wrap-start.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/framework7/src/js/xhr.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/location.js" afterPath="$PROJECT_DIR$/js/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/site.css" afterPath="$PROJECT_DIR$/css/site.css" />
+    </list>
+    <ignored path="platypus2.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="platypus2" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="emoji.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/emoji.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-63.125" vertical-offset="0" max-vertical-offset="1905">
+              <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animals.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/animals.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.4683545" vertical-offset="180" max-vertical-offset="7605">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_emoji.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_emoji.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-127.68355" vertical-offset="323" max-vertical-offset="10695">
+              <caret line="694" column="35" selection-start-line="694" selection-start-column="35" selection-end-line="694" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="location.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/location.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.541884" vertical-offset="3825" max-vertical-offset="12165">
+              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="markers.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/markers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-32.177216" vertical-offset="188" max-vertical-offset="3030">
+              <caret line="182" column="72" selection-start-line="182" selection-start-column="72" selection-end-line="182" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="people.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/people.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.822785" vertical-offset="1629" max-vertical-offset="2190">
+              <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="broadcast.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/broadcast.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.625" vertical-offset="150" max-vertical-offset="1260">
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/random.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-51.291668" vertical-offset="1664" max-vertical-offset="3090">
+              <caret line="193" column="28" selection-start-line="193" selection-start-column="28" selection-end-line="193" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transportation.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/transportation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="82.75" vertical-offset="2301" max-vertical-offset="2940">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2135" max-vertical-offset="2715">
+              <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/services.html" />
+        <option value="$PROJECT_DIR$/twitter.html" />
+        <option value="$PROJECT_DIR$/bower_components/framework7/dist/index.html" />
+        <option value="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.css" />
+        <option value="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.rtl.css" />
+        <option value="$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.min.css" />
+        <option value="$PROJECT_DIR$/share.html" />
+        <option value="$PROJECT_DIR$/text.html" />
+        <option value="$PROJECT_DIR$/email.html" />
+        <option value="$PROJECT_DIR$/map.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/site.css" />
+        <option value="$PROJECT_DIR$/random.html" />
+        <option value="$PROJECT_DIR$/_emoji.html" />
+        <option value="$PROJECT_DIR$/animals.html" />
+        <option value="$PROJECT_DIR$/markers.html" />
+        <option value="$PROJECT_DIR$/transportation.html" />
+        <option value="$PROJECT_DIR$/people.html" />
+        <option value="$PROJECT_DIR$/broadcast.html" />
+        <option value="$PROJECT_DIR$/emoji.html" />
+        <option value="$PROJECT_DIR$/js/location.js" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marker" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marker" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="markers" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marker" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="markers" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="transportation" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="marker" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="markers" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="people" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platypus2" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="FullScreen" value="true" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/img/marker/markers" />
+      <recent name="$PROJECT_DIR$/img/splash" />
+      <recent name="$PROJECT_DIR$/img/marker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6.0.41" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_platypus2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64913" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1010cf75-b2b6-42b2-bf3b-06ed45a5d09c" name="Default" comment="" />
+      <created>1411586143643</created>
+      <updated>1411586143643</updated>
+      <workItem from="1411586145717" duration="36244000" />
+      <workItem from="1411828126122" duration="13284000" />
+      <workItem from="1412034453721" duration="1025000" />
+      <workItem from="1412036167601" duration="11011000" />
+      <workItem from="1412120531705" duration="11386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="72950000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18892045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40014958" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36737806" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27059773" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39914772" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36737806" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30452344" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18892045" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40014958" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
+          <caret line="14" column="14262" selection-start-line="14" selection-start-column="14262" selection-end-line="14" selection-end-column="14262" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/less/toolbars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="4275">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broadcast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="814" max-vertical-offset="1290">
+          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3390">
+          <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="1980">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="915">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10860">
+          <caret line="395" column="0" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/js/dom7-methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4590" max-vertical-offset="9750">
+          <caret line="306" column="4" selection-start-line="306" selection-start-column="4" selection-end-line="306" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="780">
+          <caret line="34" column="136" selection-start-line="34" selection-start-column="136" selection-end-line="34" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emoji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="825">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broadcast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1125">
+          <caret line="64" column="125" selection-start-line="64" selection-start-column="125" selection-end-line="64" selection-end-column="125" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2010" max-vertical-offset="3495">
+          <caret line="177" column="10" selection-start-line="177" selection-start-column="10" selection-end-line="177" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/my-app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="945">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="915">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7916667" vertical-offset="19" max-vertical-offset="495">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/js/my-app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3510">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="465">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="1935" max-vertical-offset="4020">
+          <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="465">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="28122" max-vertical-offset="32805">
+          <caret line="1888" column="22" selection-start-line="1888" selection-start-column="22" selection-end-line="1888" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.15328467" vertical-offset="285" max-vertical-offset="1665">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/my-app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/js/navbars.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="1935">
+          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/less/toolbars.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="4275">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.rtl.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.461538" vertical-offset="5244" max-vertical-offset="6495">
+          <caret line="366" column="231" selection-start-line="366" selection-start-column="231" selection-end-line="366" selection-end-column="231" />
+          <folding>
+            <element signature="e#8630#8840#2" expanded="false" />
+            <element signature="e#9560#9770#2" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.themes.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="303">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.themes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6538463" vertical-offset="26" max-vertical-offset="4275">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/dist/css/framework7.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.076923" vertical-offset="0" max-vertical-offset="300">
+          <caret line="14" column="24372" selection-start-line="14" selection-start-column="24372" selection-end-line="14" selection-end-column="24372" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5833335" vertical-offset="307" max-vertical-offset="900">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333" vertical-offset="280" max-vertical-offset="825">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9583333" vertical-offset="265" max-vertical-offset="840">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/js/dom7-methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8796" max-vertical-offset="9750">
+          <caret line="316" column="20" selection-start-line="316" selection-start-column="20" selection-end-line="316" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.833333" vertical-offset="325" max-vertical-offset="825">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3480">
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/framework7/src/js/views.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5668" max-vertical-offset="6675">
+          <caret line="388" column="9" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2135" max-vertical-offset="2715">
+          <caret line="174" column="19" selection-start-line="174" selection-start-column="19" selection-end-line="174" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_emoji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-127.68355" vertical-offset="323" max-vertical-offset="10695">
+          <caret line="694" column="35" selection-start-line="694" selection-start-column="35" selection-end-line="694" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.177216" vertical-offset="188" max-vertical-offset="3030">
+          <caret line="182" column="72" selection-start-line="182" selection-start-column="72" selection-end-line="182" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/people.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.822785" vertical-offset="1629" max-vertical-offset="2190">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/random.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-51.291668" vertical-offset="1664" max-vertical-offset="3090">
+          <caret line="193" column="28" selection-start-line="193" selection-start-column="28" selection-end-line="193" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broadcast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625" vertical-offset="150" max-vertical-offset="1260">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transportation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="82.75" vertical-offset="2301" max-vertical-offset="2940">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/emoji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-63.125" vertical-offset="0" max-vertical-offset="1905">
+          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/animals.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4683545" vertical-offset="180" max-vertical-offset="7605">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.541884" vertical-offset="3825" max-vertical-offset="12165">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
