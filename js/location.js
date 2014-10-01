@@ -193,14 +193,19 @@ var geoUpdatedLocationCallback = function (location) {
         console.log("--NEW POSITION DETECTED--");
         console.log("Retrieved an UPDATED position [" + newLatitude + ", " + newLongitude + "]");
 
-        geoFire.set(uniqueId, [latitude, longitude]).then(function () {
+//        geoFire.set(uniqueId, [latitude, longitude]).then(function () {
+//
+//            console.log("User #" + uniqueId + "'s UPDATED position has been added to database");
+//
+//
+//        }).catch(function (error) {
+//            console.log("Error adding user " + uniqueId + "'s location to map");
+//        });
+        firebaseRef.child(uniqueId).update({l: {0: latitude, 1: longitude}});
+        firebaseRef.child(uniqueId).update({lastUpdate: Firebase.ServerValue.TIMESTAMP});
 
-            console.log("User #" + uniqueId + "'s UPDATED position has been added to database");
 
 
-        }).catch(function (error) {
-            console.log("Error adding user " + uniqueId + "'s location to map");
-        });
 
         latitude = newLatitude;
         longitude = newLongitude;
@@ -643,7 +648,7 @@ function addUserToDatabase() {
 
         console.log("User # " + uniqueId + "'s location has been added to the database NEW MESSAGE");
 
-        firebaseRef.child(uniqueId).update({'message': message, 'iconUrl': iconURL});
+        firebaseRef.child(uniqueId).update({'message': message, 'iconUrl': iconURL, lastUpdate: Firebase.ServerValue.TIMESTAMP});
 
         // When the user disconnects from Firebase (e.g. closes the app, exits the browser),
         // remove their GeoFire entry
