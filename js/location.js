@@ -23,7 +23,7 @@ var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
 var usersOnMap;
-var parentDomain = "http://localhost:8080/";
+var parentDomain = "https://truk.firebaseapp.com/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
@@ -105,19 +105,23 @@ $$(document).on('ajaxComplete', function () {
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="map"]', function (e) {
-
+    mainView.showNavbar();
+    $$('stop-broadcast-button').hide();
     if (followMode) {
         $$('#broadcast-button').hide();
 
         $$('#stop-following-button').show();
 
     }
+    else{
+        startMap();
+    }
 
-    mainView.showNavbar();
 
-    $$('stop-broadcast-button').hide();
 
-    startMap();
+
+
+
 
 
 })
@@ -767,6 +771,10 @@ var setIcon = function (icon) {
 
 var buildFollowMap = function () {
 
+    $$("#finding-broadcast").hide();
+
+    mainView.loadPage('map.html');
+
     firebaseRef.child(platId).once('value', function (dataSnapshot) {
 
         plat = dataSnapshot.val();
@@ -790,9 +798,7 @@ var buildFollowMap = function () {
             overviewMapControl: false
         });
 
-        $$("#finding-broadcast").hide();
 
-        mainView.loadPage('map.html');
 
 
         setTimeout(function () {
