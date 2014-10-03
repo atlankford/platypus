@@ -106,12 +106,10 @@
 
 
     <!-- STYLESHEETS -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">    <link href="css/buttons.css" rel="stylesheet">
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.min.css">
     <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.themes.min.css">
-
     <link href="css/site.css" rel="stylesheet">
 
 
@@ -125,19 +123,25 @@
 <div class="panel-overlay"></div>
 <!-- Left panel with reveal effect-->
 <div class="panel panel-left panel-reveal">
+    <div class="content-block-title">Left Panel</div>
+
     <div class="content-block">
-        <p>PLAT version 1.0</p>
+        <div class="content-block">
+
+            <p>PLAT version 0.7 BETA</p>
+            <br>
+            <p>Brought to you by</p>
+            <a href="http://twitter.com/atlankford">@atlankford</a>
+            <br>
+        </div>
     </div>
 </div>
-<!-- Right panel with cover effect-->
 <div class="panel panel-right panel-cover">
     <div class="content-block">
         <p>Right panel content goes here</p>
     </div>
 </div>
-
 <div class="views">
-    <!-- Your main view, should have "view-main" class-->
     <div class="view view-main hidden-navbar">
         <!-- Top Navbar-->
         <div class="navbar">
@@ -161,9 +165,9 @@
                         <div class="preloader"></div>
                         <div class="pull-to-refresh-arrow"></div>
                     </div>
-                    <div class="index-content">
+                    <div class="index-content ">
                     <h1 id="title">PLAT</h1>
-                    <h3 id="subtitle">Share your location anonymously.</h3>
+                    <h3 id="subtitle" class="thin">Share your location anonymously.</h3>
                     <br>
                     <h3 class="animated infinite pulse" id="finding-broadcast">We are finding that broadcast...</h3>
 
@@ -185,7 +189,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6U2ExB8yLDc7RiGPYK3C3yIzDPpyFJE0&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwL16K8ra7P_rtlR3tS0YLKVGcyJ5MJ8M&sensor=false"></script>
 
 <!-- Firebase -->
 <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
@@ -205,22 +209,16 @@
 <!-- Custom JavaScript -->
 <script src="js/location.js"></script>
 
-<!--Bootstrap-->
-<!--<script src="js/vendor/bootstrap.min.js"></script>-->
 
 <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-37102688-1']);
-    _gaq.push(['_trackPageview']);
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
+    ga('create', 'UA-55344363-1', 'auto');
+    ga('send', 'pageview');
+
 </script>
 </body>
 </html>

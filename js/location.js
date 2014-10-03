@@ -23,7 +23,7 @@ var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
 var usersOnMap;
-var parentDomain = "http://plt.link/";
+var parentDomain = "http://localhost:8080/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
@@ -105,6 +105,7 @@ $$(document).on('ajaxComplete', function () {
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="map"]', function (e) {
+
     mainView.showNavbar();
     $$('stop-broadcast-button').hide();
     if (followMode) {
@@ -116,12 +117,6 @@ $$(document).on('pageInit', '.page[data-page="map"]', function (e) {
     else{
         startMap();
     }
-
-
-
-
-
-
 
 
 })
@@ -171,6 +166,8 @@ var geolocationCallback = function (location) {
     latitude = location.coords.latitude;
     longitude = location.coords.longitude;
     center = [latitude, longitude];
+    myApp.hidePreloader();
+
     $$('#launch-button').show();
     console.log("Retrieved user # " + uniqueId + "'s location: [" + latitude + ", " + longitude + "]");
 
@@ -321,8 +318,6 @@ var initializeMap = function () {
 function broadcastExistsCallback(id, exists) {
     if (exists) {
 
-        $$("#finding-broadcast").hide();
-        mainView.loadPage('map.html');
         buildFollowMap();
 
     } else {
@@ -403,7 +398,7 @@ var geoListen = function () {
             // Get the vehicle data from the Open Data Set
             user = dataSnapshot.val();
 //            user.message
-            console.log("--------------------->" + dataSnapshot.val());
+
             user.id = key;
 
             // If the vehicle has not already exited this query in the time it took to look up its data in the Open Data
@@ -605,6 +600,8 @@ window.onload = function () {
         }, 5000)
     }
     else {
+        myApp.showPreloader();
+
         startApp();
     }
 
@@ -650,11 +647,14 @@ var errorHandler = function (error) {
 
 function addUserToDatabase() {
 
+
+
     geoFire.set(uniqueId, [latitude, longitude]).then(function () {
+        firebaseRef.child(uniqueId).update({'message': message, 'iconUrl': iconURL, lastUpdate: Firebase.ServerValue.TIMESTAMP});
+
 
         console.log("User # " + uniqueId + "'s location has been added to the database NEW MESSAGE");
 
-        firebaseRef.child(uniqueId).update({'message': message, 'iconUrl': iconURL, lastUpdate: Firebase.ServerValue.TIMESTAMP});
 
         // When the user disconnects from Firebase (e.g. closes the app, exits the browser),
         // remove their GeoFire entry
@@ -668,7 +668,6 @@ function addUserToDatabase() {
 function createUserMarker(user) {
 
     console.log("creating marker for at url' " + user.iconUrl + "new user at " + user.l[0] + "," + user.l[0]);
-
 
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(user.l[0], user.l[1]),
@@ -713,8 +712,6 @@ function createUserMarker(user) {
 
 /* Animates the Marker class (based on https://stackoverflow.com/a/10906464) */
 google.maps.Marker.prototype.animatedMoveTo = function (newLocation) {
-    console.log(google.maps.Marker.toString());
-
     var toLat = newLocation[0];
     var toLng = newLocation[1];
 
@@ -776,7 +773,9 @@ var setIcon = function (icon) {
 
 var buildFollowMap = function () {
 
+    $$("#finding-broadcast").hide();
 
+    mainView.loadPage('map.html');
 
     firebaseRef.child(platId).once('value', function (dataSnapshot) {
 

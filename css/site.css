@@ -174,3 +174,10 @@ body{
 .gm-style .gm-style-iw{
     color: #000000;
 }
+.small-font{
+    font-size: 18px;
+    font-weight: 300;
+}
+.thin{
+    font-weight: 300;
+}
