@@ -23,7 +23,7 @@ var firebaseRef = new Firebase(firebaseUrl);
 //new geoFire instance
 var geoFire = new GeoFire(firebaseRef);
 var usersOnMap;
-var parentDomain = "https://truk.firebaseapp.com/";
+var parentDomain = "http://plt.link/";
 var parentDomainLength = parentDomain.length;
 var plat;
 var platId;
@@ -321,6 +321,8 @@ var initializeMap = function () {
 function broadcastExistsCallback(id, exists) {
     if (exists) {
 
+        $$("#finding-broadcast").hide();
+        mainView.loadPage('map.html');
         buildFollowMap();
 
     } else {
@@ -401,7 +403,7 @@ var geoListen = function () {
             // Get the vehicle data from the Open Data Set
             user = dataSnapshot.val();
 //            user.message
-
+            console.log("--------------------->" + dataSnapshot.val());
             user.id = key;
 
             // If the vehicle has not already exited this query in the time it took to look up its data in the Open Data
@@ -667,6 +669,7 @@ function createUserMarker(user) {
 
     console.log("creating marker for at url' " + user.iconUrl + "new user at " + user.l[0] + "," + user.l[0]);
 
+
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(user.l[0], user.l[1]),
         optimized: true,
@@ -710,6 +713,8 @@ function createUserMarker(user) {
 
 /* Animates the Marker class (based on https://stackoverflow.com/a/10906464) */
 google.maps.Marker.prototype.animatedMoveTo = function (newLocation) {
+    console.log(google.maps.Marker.toString());
+
     var toLat = newLocation[0];
     var toLng = newLocation[1];
 
@@ -771,9 +776,7 @@ var setIcon = function (icon) {
 
 var buildFollowMap = function () {
 
-    $$("#finding-broadcast").hide();
 
-    mainView.loadPage('map.html');
 
     firebaseRef.child(platId).once('value', function (dataSnapshot) {
 
