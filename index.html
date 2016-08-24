@@ -2,145 +2,125 @@
 <html class="with-statusbar-overlay">
 <head>
     <!-- Run in full-screen mode. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Customize home screen title. -->
     <meta name="apple-mobile-web-app-title" content="PLAT">
-
     <!-- Disable phone number detection. -->
     <meta name="format-detection" content="telephone=no">
-
-
     <!-- Prevent text size adjustment on orientation change. -->
     <style>html {
-        -webkit-text-size-adjust: 100%;
-    }</style>
-
+        -webkit-text-size-adjust : 100%;
+        }</style>
     <title>PLAT</title>
-
     <!-- Icons -->
-
     <!-- iOS 7 iPad (retina) -->
     <link href="img/icon/152.png"
           sizes="152x152"
           rel="apple-touch-icon">
-
     <!-- iOS 6 iPad (retina) -->
     <link href="img/icon/144.png"
           sizes="144x144"
           rel="apple-touch-icon">
-
     <!-- iOS 7 iPhone (retina) -->
     <link href="img/icon/120.png"
           sizes="120x120"
           rel="apple-touch-icon">
-
     <!-- iOS 6 iPhone (retina) -->
     <link href="img/icon/114.png"
           sizes="114x114"
           rel="apple-touch-icon">
-
     <!-- iOS 7 iPad -->
     <link href="img/icon/76.png"
           sizes="76x76"
           rel="apple-touch-icon">
-
     <!-- iOS 6 iPad -->
     <link href="img/icon/72.png"
           sizes="72x72"
           rel="apple-touch-icon">
-
     <!-- iOS 6 iPhone -->
     <link href="img/icon/57.png"
           sizes="57x57"
           rel="apple-touch-icon">
-
-    <!--<!-- Startup images -->
-
+    <!--Startup images -->
     <!-- iOS 6 & 7 iPad (retina, portrait) -->
     <link href="img/splash/1536x2008.png"
-    media="(device-width: 768px) and (device-height: 1024px)
+          media="(device-width: 768px) and (device-height: 1024px)
     and (orientation: portrait)
     and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 & 7 iPad (retina, landscape) -->
     <link href="img/splash/1496x2048.png"
-    media="(device-width: 768px) and (device-height: 1024px)
+          media="(device-width: 768px) and (device-height: 1024px)
     and (orientation: landscape)
     and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 iPad (portrait) -->
     <link href="img/splash/768x1004.png"
-    media="(device-width: 768px) and (device-height: 1024px)
+          media="(device-width: 768px) and (device-height: 1024px)
     and (orientation: portrait)
     and (-webkit-device-pixel-ratio: 1)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 iPad (landscape) -->
     <link href="img/splash/748x1024.png"
-    media="(device-width: 768px) and (device-height: 1024px)
+          media="(device-width: 768px) and (device-height: 1024px)
     and (orientation: landscape)
     and (-webkit-device-pixel-ratio: 1)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 & 7 iPhone 5 -->
     <link href="img/splash/640x1096.png"
-    media="(device-width: 320px) and (device-height: 568px)
+          media="(device-width: 320px) and (device-height: 568px)
     and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 & 7 iPhone (retina) -->
     <link href="img/splash/640x920.png"
-    media="(device-width: 320px) and (device-height: 480px)
+          media="(device-width: 320px) and (device-height: 480px)
     and (-webkit-device-pixel-ratio: 2)"
-    rel="apple-touch-startup-image">
-
+          rel="apple-touch-startup-image">
     <!-- iOS 6 iPhone -->
     <link href="img/splash/320x460.png"
-    media="(device-width: 320px) and (device-height: 480px)
+          media="(device-width: 320px) and (device-height: 480px)
     and (-webkit-device-pixel-ratio: 1)"
-    rel="apple-touch-startup-image">
-
-
+          rel="apple-touch-startup-image">
     <!-- STYLESHEETS -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.min.css">
     <link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.themes.min.css">
     <link href="css/site.css" rel="stylesheet">
-
-
 </head>
 <body class="layout">
 <!-- Views-->
 <!-- Status bar overlay for fullscreen mode-->
 <div class="statusbar-overlay"></div>
-
 <!-- Panels overlay-->
 <div class="panel-overlay"></div>
 <!-- Left panel with reveal effect-->
 <div class="panel panel-left panel-reveal">
-    <div class="content-block-title">Left Panel</div>
-
+    <div class="content-block-title"></div>
     <div class="content-block">
         <div class="content-block">
-
-            <p>PLAT version 0.7 BETA</p>
+            <h3>PLAT version 0.7 BETA</h3>
             <br>
-            <p>Brought to you by</p>
-            <a href="http://twitter.com/atlankford">@atlankford</a>
+            <a onclick="externalLink()"><h3>About</h3></a>
+            <h3>Contact:</h3>
+            <ul>
+            <li><p>info@plt.link</p></li>
+                <li><p>@pltlink</p></li>
+                <li><p>http://about.plt.link</p></li>
+            </ul>
+
             <br>
         </div>
     </div>
 </div>
-<div class="panel panel-right panel-cover">
-    <div class="content-block">
-        <p>Right panel content goes here</p>
-    </div>
-</div>
+<!--<div class="panel panel-right panel-cover">-->
+    <!--<div class="content-block">-->
+        <!--<p>Right panel content goes here</p>-->
+    <!--</div>-->
+<!--</div>-->
 <div class="views">
     <div class="view view-main hidden-navbar">
         <!-- Top Navbar-->
@@ -158,67 +138,58 @@
             <!-- Page, data-page contains page name-->
             <div data-page="index" class="page " id="index">
                 <!-- Scrollable page content-->
-
-
                 <div class="page-content pull-to-refresh-content">
                     <div class="pull-to-refresh-layer">
                         <div class="preloader"></div>
                         <div class="pull-to-refresh-arrow"></div>
                     </div>
                     <div class="index-content ">
-                    <h1 id="title">PLAT</h1>
-                    <h3 id="subtitle" class="thin">Share your location anonymously.</h3>
-                    <br>
-                    <h3 class="animated infinite pulse" id="finding-broadcast">We are finding that broadcast...</h3>
+                        <h1 id="title">PLAT</h1>
 
+                        <h3 id="subtitle" class="thin">Broadcast your location.</h3>
+                        <br>
+
+                        <h3 class="animated infinite pulse" id="finding-broadcast">We are locating that channel...</h3>
                     </div>
-                    <a href="map.html"  id="launch-button" class="white-button index-button">GO</a>
+                    <a href="map.html" id="launch-button" class="white-button index-button">GO</a>
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 <!-- JAVASCRIPT -->
-
 <!--google ads-->
-
-
 <!--jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 <!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwL16K8ra7P_rtlR3tS0YLKVGcyJ5MJ8M&sensor=false"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD24pPnSA-Rry9BfmaupmBU9Y7R1EcV31o&sensor=false"></script>
 <!-- Firebase -->
 <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
-
 <!-- RSVP -->
 <script src="js/vendor/rsvp.min.js"></script>
-
 <!-- GeoFire -->
 <script src="js/vendor/geofire.min.js"></script>
-
 <!-- Lo-Dash -->
 <script src="js/vendor/lodash.min.js"></script>
-
 <!-- Path to Framework7 Library JS-->
 <script type="text/javascript" src="bower_components/framework7/dist/js/framework7.min.js"></script>
-
 <!-- Custom JavaScript -->
 <script src="js/location.js"></script>
-
-
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('require', 'displayfeatures');
     ga('create', 'UA-55344363-1', 'auto');
     ga('send', 'pageview');
-
 </script>
 </body>
 </html>

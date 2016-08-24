@@ -1,6 +1,6 @@
 /*======================================================
-************   App Resize Actions   ************
-======================================================*/
+ ************   App Resize Actions   ************
+ ======================================================*/
 // Prevent iPad horizontal body scrolling when soft keyboard is opened
 function _fixIpadBodyScrolLeft() {
     if (app.device.ipad) {
@@ -17,7 +17,6 @@ app.initResize = function () {
 app.resize = function () {
     if (app.sizeNavbars) app.sizeNavbars();
     _fixIpadBodyScrolLeft();
-    
 };
 app.orientationchange = function () {
     if (app.device && app.device.minimalUi) {

@@ -1,6 +1,6 @@
 /*======================================================
-************   Messagebar   ************
-======================================================*/
+ ************   Messagebar   ************
+ ======================================================*/
 app.initMessagebar = function (pageContainer) {
     pageContainer = $(pageContainer);
     var messagebar = pageContainer.hasClass('messagebar') ? pageContainer : pageContainer.find('.messagebar');
@@ -9,7 +9,6 @@ app.initMessagebar = function (pageContainer) {
     var pageContent = messagebar.parents('.page').find('.page-content');
     var initialBarHeight = messagebar[0].offsetHeight;
     var initialAreaHeight = textarea[0].offsetHeight;
-
     //Prevent submit
     function preventSubmit(e) {
         e.preventDefault();
@@ -17,10 +16,9 @@ app.initMessagebar = function (pageContainer) {
 
     // Resize textarea
     function sizeTextarea() {
-        
+
         // Reset
         textarea.css({'height': ''});
-        
         var height = textarea[0].offsetHeight;
         var diff = height - textarea[0].clientHeight;
         var scrollHeight = textarea[0].scrollHeight;
@@ -47,13 +45,14 @@ app.initMessagebar = function (pageContainer) {
             }
         }
     }
+
     var to;
+
     function handleKey(e) {
         clearTimeout(to);
         to = setTimeout(function () {
             sizeTextarea();
         }, 0);
-            
     }
 
     function attachEvents(destroy) {
@@ -61,20 +60,20 @@ app.initMessagebar = function (pageContainer) {
         messagebar[method]('submit', preventSubmit);
         textarea[method]('change keydown keypress keyup paste cut', handleKey);
     }
+
     function detachEvents() {
         attachEvents(true);
     }
-    
-    messagebar[0].f7DestroyMessagebar = detachEvents;
 
+    messagebar[0].f7DestroyMessagebar = detachEvents;
     // Attach events
     attachEvents();
-
     // Destroy on page remove
     function pageBeforeRemove() {
         detachEvents();
         pageContainer.off('pageBeforeRemove', pageBeforeRemove);
     }
+
     if (pageContainer.hasClass('page')) {
         pageContainer.on('pageBeforeRemove', pageBeforeRemove);
     }

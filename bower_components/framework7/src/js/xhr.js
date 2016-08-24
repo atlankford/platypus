@@ -1,6 +1,6 @@
 /*======================================================
-************   XHR   ************
-======================================================*/
+ ************   XHR   ************
+ ======================================================*/
 // XHR Caching
 app.cache = [];
 app.removeFromCache = function (url) {
@@ -10,7 +10,6 @@ app.removeFromCache = function (url) {
     }
     if (index !== false) app.cache.splice(index, 1);
 };
-
 // XHR
 app.xhr = false;
 app.get = function (url, view, ignoreCache, callback) {
@@ -32,7 +31,6 @@ app.get = function (url, view, ignoreCache, callback) {
             }
         }
     }
-
     app.xhr = $.ajax({
         url: url,
         method: 'GET',
@@ -60,6 +58,5 @@ app.get = function (url, view, ignoreCache, callback) {
         }
     });
     if (view) view.xhr = app.xhr;
-
     return app.xhr;
 };

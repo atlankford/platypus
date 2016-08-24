@@ -1,11 +1,10 @@
 /*===============================================================================
-************   Store and parse forms data   ************
-===============================================================================*/
+ ************   Store and parse forms data   ************
+ ===============================================================================*/
 app.formsData = {};
 app.formStoreData = function (formId, formJSON) {
     // Store form data in app.formsData
     app.formsData[formId] = formJSON;
-
     // Store form data in local storage also
     app.ls['f7form-' + formId] = JSON.stringify(formJSON);
 };
@@ -15,7 +14,6 @@ app.formDeleteData = function (formId) {
         app.formsData[formId] = '';
         delete app.formsData[formId];
     }
-
     // Delete form data from local storage also
     if (app.ls['f7form-' + formId]) {
         app.ls['f7form-' + formId] = '';
@@ -33,10 +31,8 @@ app.formGetData = function (formId) {
 app.formToJSON = function (form) {
     form = $(form);
     if (form.length !== 1) return false;
-
     // Form data
     var formData = {};
-
     // Skip input types
     var skipTypes = ['submit', 'image', 'button', 'file'];
     var skipNames = [];
@@ -74,19 +70,15 @@ app.formToJSON = function (form) {
                     break;
             }
         }
-            
     });
-
     return formData;
 };
 app.formFromJSON = function (form, formData) {
     form = $(form);
     if (form.length !== 1) return false;
-
     // Skip input types
     var skipTypes = ['submit', 'image', 'button', 'file'];
     var skipNames = [];
-
     form.find('input, select, textarea').each(function () {
         var input = $(this);
         var name = input.attr('name');
@@ -123,16 +115,13 @@ app.formFromJSON = function (form, formData) {
                     break;
             }
         }
-            
     });
 };
 app.initFormsStorage = function (pageContainer) {
     pageContainer = $(pageContainer);
     if (pageContainer.length === 0) return;
-
     var forms = pageContainer.find('form.store-data');
     if (forms.length === 0) return;
-    
     // Parse forms data and fill form if there is such data
     forms.each(function () {
         var id = this.getAttribute('id');
@@ -151,32 +140,28 @@ app.initFormsStorage = function (pageContainer) {
         app.formStoreData(formId, formJSON);
         form.trigger('store', {data: formJSON});
     }
-    forms.on('change submit', storeForm);
 
+    forms.on('change submit', storeForm);
     // Detach Listeners
     function pageBeforeRemove() {
         forms.off('change submit', storeForm);
         pageContainer.off('pageBeforeRemove', pageBeforeRemove);
     }
+
     pageContainer.on('pageBeforeRemove', pageBeforeRemove);
 };
-
 // Ajax submit on forms
 $(document).on('submit change', 'form.ajax-submit, form.ajax-submit-onchange', function (e) {
     var form = $(this);
     if (e.type === 'change' && !form.hasClass('ajax-submit-onchange')) return;
     if (e.type === 'submit') e.preventDefault();
-    
     var method = form.attr('method') || 'GET';
     var contentType = form.attr('enctype');
-
     var url = form.attr('action');
     if (!url) return;
-
     var data;
     if (method === 'POST') data = new FormData(form[0]);
     else data = $.serializeObject(app.formToJSON(form[0]));
-
     var xhr = $.ajax({
         method: method,
         url: url,

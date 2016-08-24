@@ -1,6 +1,6 @@
 /*======================================================
-************   Searchbar   ************
-======================================================*/
+ ************   Searchbar   ************
+ ======================================================*/
 app.initSearchbar = function (pageContainer) {
     pageContainer = $(pageContainer);
     var searchbar = pageContainer.hasClass('searchbar') ? pageContainer : pageContainer.find('.searchbar');
@@ -29,21 +29,17 @@ app.initSearchbar = function (pageContainer) {
     else {
         notFound = $(notFound);
     }
-
     // Cancel button
     var cancelWidth, cancelMarginProp = app.rtl ? 'margin-left' : 'margin-right';
     if (cancel.length > 0) {
         cancelWidth = cancel.width();
-
-        cancel.css(cancelMarginProp, - cancelWidth + 'px');
+        cancel.css(cancelMarginProp, -cancelWidth + 'px');
     }
-
     // Handlers
     function disableSearchbar() {
         input.val('').trigger('change');
         searchbar.removeClass('searchbar-active searchbar-not-empty');
-        if (cancel.length > 0) cancel.css(cancelMarginProp, - cancelWidth + 'px');
-        
+        if (cancel.length > 0) cancel.css(cancelMarginProp, -cancelWidth + 'px');
         if (searchList) searchbarOverlay.removeClass('searchbar-overlay-active');
         if (app.device.ios) {
             setTimeout(function () {
@@ -63,7 +59,6 @@ app.initSearchbar = function (pageContainer) {
                 searchbar.addClass('searchbar-active');
                 if (cancel.length > 0) cancel.css(cancelMarginProp, '0px');
                 searchList.trigger('enableSearch');
-
             }, 400);
         }
         else {
@@ -110,14 +105,14 @@ app.initSearchbar = function (pageContainer) {
         input[method]('change keydown keypress keyup', searchValue);
         clear[method]('click', clearSearchbar);
     }
+
     function detachEvents() {
         attachEvents(true);
     }
-    searchbar[0].f7DestroySearchbar = detachEvents;
 
+    searchbar[0].f7DestroySearchbar = detachEvents;
     // Attach events
     attachEvents();
-
     // Search
     function search(query) {
         var values = query.trim().toLowerCase().split(' ');
@@ -140,7 +135,6 @@ app.initSearchbar = function (pageContainer) {
                 foundItems.push(el[0]);
             }
         });
-
         if (app.params.searchbarHideDividers) {
             searchList.find('.item-divider, .list-group-title').each(function () {
                 var title = $(this);
@@ -169,9 +163,7 @@ app.initSearchbar = function (pageContainer) {
                 }
             });
         }
-
         searchList.trigger('search', {query: query, foundItems: foundItems});
-
         if (foundItems.length === 0) {
             notFound.show();
             found.hide();
@@ -187,10 +179,10 @@ app.initSearchbar = function (pageContainer) {
         detachEvents();
         pageContainer.off('pageBeforeRemove', pageBeforeRemove);
     }
+
     if (pageContainer.hasClass('page')) {
         pageContainer.on('pageBeforeRemove', pageBeforeRemove);
     }
-        
 };
 app.destroySearchbar = function (pageContainer) {
     pageContainer = $(pageContainer);

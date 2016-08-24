@@ -1,9 +1,8 @@
 /*======================================================
-************   Pages   ************
-======================================================*/
+ ************   Pages   ************
+ ======================================================*/
 // Page Callbacks API
 app.pageCallbacks = {};
-
 app.onPage = function (callbackName, pageName, callback) {
     if (pageName && pageName.split(' ').length > 1) {
         var pageNames = pageName.split(' ');
@@ -41,7 +40,6 @@ app.onPage = function (callbackName, pageName, callback) {
         trigger: callback
     };
 };
-
 //Create callbacks methods dynamically
 function createPageCallback(callbackName) {
     var capitalized = callbackName.replace(/^./, function (match) {
@@ -51,13 +49,11 @@ function createPageCallback(callbackName) {
         return app.onPage(callbackName, pageName, callback);
     };
 }
-
 var pageCallbacksNames = ('beforeInit init beforeAnimation afterAnimation beforeRemove').split(' ');
 for (var i = 0; i < pageCallbacksNames.length; i++) {
     app.pageCallbacks[pageCallbacksNames[i]] = {};
     createPageCallback(pageCallbacksNames[i]);
 }
-
 app.triggerPageCallbacks = function (callbackName, pageName, pageData) {
     var allPagesCallbacks = app.pageCallbacks[callbackName]['*'];
     if (allPagesCallbacks) {
@@ -71,7 +67,6 @@ app.triggerPageCallbacks = function (callbackName, pageName, pageData) {
         callbacks[i](pageData);
     }
 };
-
 // On Page Init Callback
 app.pageInitCallback = function (view, pageContainer, url, position, navbarInnerContainer) {
     if (pageContainer.f7PageInitialized) return;
@@ -86,22 +81,17 @@ app.pageInitCallback = function (view, pageContainer, url, position, navbarInner
         from: position,
         navbarInnerContainer: navbarInnerContainer
     };
-
     // Store pagedata in page
     pageContainer.f7PageData = pageData;
-
     // Update View's activePage
     if (view) view.activePage = pageData;
-
     // Before Init Callbacks
     app.pluginHook('pageBeforeInit', pageData);
     if (app.params.onPageBeforeInit) app.params.onPageBeforeInit(app, pageData);
     app.triggerPageCallbacks('beforeInit', pageData.name, pageData);
     $(pageData.container).trigger('pageBeforeInit', {page: pageData});
-
     // Init page
     app.initPage(pageContainer);
-
     // Init Callback
     app.pluginHook('pageInit', pageData);
     if (app.params.onPageInit) app.params.onPageInit(app, pageData);
@@ -135,24 +125,19 @@ app.pageAnimCallbacks = function (callback, view, params) {
     };
     var oldPage = params.oldPage,
         newPage = params.newPage;
-
     // Update page date
     params.pageContainer.f7PageData = pageData;
-
     if (callback === 'after') {
         app.pluginHook('pageAfterAnimation', pageData);
         if (app.params.onPageAfterAnimation) app.params.onPageAfterAnimation(app, pageData);
         app.triggerPageCallbacks('afterAnimation', pageData.name, pageData);
         $(pageData.container).trigger('pageAfterAnimation', {page: pageData});
-
     }
     if (callback === 'before') {
         // Add data-page on view
         $(view.container).attr('data-page', pageData.name);
-
         // Update View's activePage
         if (view) view.activePage = pageData;
-
         // Hide/show navbar dynamically
         if (newPage.hasClass('no-navbar') && !oldPage.hasClass('no-navbar')) {
             view.hideNavbar();
@@ -174,7 +159,6 @@ app.pageAnimCallbacks = function (callback, view, params) {
         $(pageData.container).trigger('pageBeforeAnimation', {page: pageData});
     }
 };
-
 // Init Page Events and Manipulations
 app.initPage = function (pageContainer) {
     // Size navbars on page load
@@ -196,11 +180,9 @@ app.initPage = function (pageContainer) {
     // Init message bar
     if (app.initMessagebar) app.initMessagebar(pageContainer);
 };
-
 // Load Page
 app.allowPageChange = true;
 app._tempDomElement = document.createElement('div');
-
 // Search required element in parsed content in related view
 function _findElement(selector, container, view) {
     container = $(container);
@@ -220,7 +202,6 @@ function _findElement(selector, container, view) {
         return undefined;
     }
 }
-
 // Set pages classess for animation
 function _animatePages(leftPage, rightPage, direction, view) {
     // Loading new page
@@ -234,7 +215,6 @@ function _animatePages(leftPage, rightPage, direction, view) {
         rightPage.removeClass('page-on-center').addClass('page-from-center-to-right');
     }
 }
-
 // Set navbars classess for animation
 function _animateNavbars(leftNavbarInner, rightNavbarInner, direction, view) {
     // Loading new page
@@ -249,7 +229,6 @@ function _animateNavbars(leftNavbarInner, rightNavbarInner, direction, view) {
                 }
             }
         });
-
         leftNavbarInner.removeClass('navbar-on-center').addClass('navbar-from-center-to-left');
         leftNavbarInner.find('.sliding').each(function () {
             var sliding = $(this);
@@ -276,7 +255,6 @@ function _animateNavbars(leftNavbarInner, rightNavbarInner, direction, view) {
                 }
             }
         });
-
         rightNavbarInner.removeClass('navbar-on-center').addClass('navbar-from-center-to-right');
         rightNavbarInner.find('.sliding').each(function () {
             var sliding = $(this);
@@ -290,15 +268,12 @@ function _animateNavbars(leftNavbarInner, rightNavbarInner, direction, view) {
     }
 }
 function _reload(view, url, content, options) {
-    var viewContainer = $(view.container), 
+    var viewContainer = $(view.container),
         pagesContainer = $(view.pagesContainer),
         newPage, oldPage, pagesInView, i, oldNavbarInner, newNavbarInner, navbar, dynamicNavbar, reloadPosition;
-
     // Plugin hook
     app.pluginHook('loadPage', view, url, content);
-
     app._tempDomElement.innerHTML = '';
-
     // Parse DOM
     if (url || (typeof content === 'string')) {
         app._tempDomElement.innerHTML = content;
@@ -311,32 +286,23 @@ function _reload(view, url, content, options) {
             $(app._tempDomElement).append(content);
         }
     }
-
     // Reload position
     reloadPosition = options.reloadPrevious ? 'left' : 'center';
-
     // Find new page
     newPage = _findElement('.page', app._tempDomElement, view);
-
     // If page not found exit
     if (!newPage) {
         view.allowPageChange = true;
         return;
     }
-
-
     newPage.addClass('page-on-' + reloadPosition);
-
     // Find old page (should be the last one) and remove older pages
     pagesInView = pagesContainer.children('.page:not(.cached)');
-
-    if (options.reloadPrevious && pagesInView.length === 1)  {
+    if (options.reloadPrevious && pagesInView.length === 1) {
         view.allowPageChange = true;
         return;
     }
-
     oldPage = pagesInView.eq(pagesInView.length - 1);
-
     // Dynamic navbar
     if (view.params.dynamicNavbar) {
         dynamicNavbar = true;
@@ -351,7 +317,6 @@ function _reload(view, url, content, options) {
     if (dynamicNavbar) {
         newNavbarInner.addClass('navbar-on-' + reloadPosition);
     }
-
     // save content areas into view's cache
     if (!url) {
         url = '#content-' + view.history.length;
@@ -359,7 +324,6 @@ function _reload(view, url, content, options) {
             view.contentCache[url] = content;
         }
     }
-
     // Update View history
     view.url = url;
     var lastUrl = view.history[view.history.length - (options.reloadPrevious ? 2 : 1)];
@@ -368,7 +332,6 @@ function _reload(view, url, content, options) {
         delete view.contentCache[lastUrl];
     }
     view.history[view.history.length - (options.reloadPrevious ? 2 : 1)] = url;
-
     // Dom manipulations
     if (options.reloadPrevious) {
         oldPage = oldPage.prev('.page');
@@ -377,40 +340,32 @@ function _reload(view, url, content, options) {
             oldNavbarInner = oldNavbarInner.prev('.navbar-inner');
             newNavbarInner.insertAfter(oldNavbarInner);
         }
-    }   
+    }
     else {
         pagesContainer.append(newPage[0]);
         if (dynamicNavbar) navbar.append(newNavbarInner[0]);
     }
-
     // Remove old page and navbar
     app.pageRemoveCallback(view, oldPage[0], reloadPosition);
     oldPage.remove();
     if (dynamicNavbar) oldNavbarInner.remove();
-    
     // Page Init Events
     app.pageInitCallback(view, newPage[0], url, reloadPosition, dynamicNavbar ? newNavbarInner[0] : undefined);
-
     // Navbar init event
     if (dynamicNavbar) {
         app.navbarInitCallback(view, newPage[0], navbar[0], newNavbarInner[0], url, reloadPosition);
     }
-
     view.allowPageChange = true;
 }
 function _load(view, url, content, options) {
-    var viewContainer = $(view.container), 
+    var viewContainer = $(view.container),
         pagesContainer = $(view.pagesContainer),
         animatePages = options.animatePages,
         newPage, oldPage, pagesInView, i, oldNavbarInner, newNavbarInner, navbar, dynamicNavbar;
-
     if (typeof animatePages === 'undefined') animatePages = view.params.animatePages;
-
     // Plugin hook
     app.pluginHook('loadPage', view, url, content);
-
     app._tempDomElement.innerHTML = '';
-
     // Parse DOM
     if (url || (typeof content === 'string')) {
         app._tempDomElement.innerHTML = content;
@@ -423,18 +378,14 @@ function _load(view, url, content, options) {
             $(app._tempDomElement).append(content);
         }
     }
-
     // Find new page
     newPage = _findElement('.page', app._tempDomElement, view);
-
     // If page not found exit
     if (!newPage) {
         view.allowPageChange = true;
         return;
     }
-
     newPage.addClass('page-on-right');
-
     // Find old page (should be the last one) and remove older pages
     pagesInView = pagesContainer.children('.page:not(.cached)');
     if (pagesInView.length > 1) {
@@ -455,9 +406,7 @@ function _load(view, url, content, options) {
             $(pagesInView[i]).addClass('cached');
         }
     }
-
     oldPage = pagesContainer.children('.page:not(.cached)');
-
     // Dynamic navbar
     if (view.params.dynamicNavbar) {
         dynamicNavbar = true;
@@ -488,20 +437,16 @@ function _load(view, url, content, options) {
         newNavbarInner.addClass('navbar-on-right');
         navbar.append(newNavbarInner[0]);
     }
-
     // save content areas into view's cache
     if (!url) {
         url = '#content-' + view.history.length;
-
         if (!view.params.domCache) {
             view.contentCache[url] = content;
         }
     }
-
     // Update View history
     view.url = url;
     view.history.push(url);
-
     // Unique history
     var history = false;
     var historyBecameUnique = false;
@@ -512,18 +457,14 @@ function _load(view, url, content, options) {
             historyBecameUnique = true;
         }
     }
-
     // Append New Page
     pagesContainer.append(newPage[0]);
-
     // Page Init Events
     app.pageInitCallback(view, newPage[0], url, 'right', dynamicNavbar ? newNavbarInner[0] : undefined);
-
     // Navbar init event
     if (dynamicNavbar) {
         app.navbarInitCallback(view, newPage[0], navbar[0], newNavbarInner[0], url, 'right');
     }
-
     if (dynamicNavbar && animatePages) {
         newNavbarInner.find('.sliding').each(function () {
             var sliding = $(this);
@@ -537,10 +478,8 @@ function _load(view, url, content, options) {
     }
     // Force reLayout
     var clientLeft = newPage[0].clientLeft;
-
     // Before Anim Callback
     app.pageAnimCallbacks('before', view, {pageContainer: newPage[0], url: url, position: 'right', oldPage: oldPage, newPage: newPage});
-
     function afterAnimation() {
         view.allowPageChange = true;
         newPage.removeClass('page-from-right-to-center page-on-right').addClass('page-on-center');
@@ -569,13 +508,11 @@ function _load(view, url, content, options) {
     if (animatePages) {
         // Set pages before animation
         _animatePages(oldPage, newPage, 'to-left', view);
-
         // Dynamic navbar animation
         if (dynamicNavbar) {
             setTimeout(function () {
                 _animateNavbars(oldNavbarInner, newNavbarInner, 'to-left', view);
             }, 0);
-
         }
         newPage.animationEnd(function (e) {
             afterAnimation();
@@ -588,10 +525,8 @@ function _load(view, url, content, options) {
 function preprocess(content, url, next) {
     // Plugin hook
     app.pluginHook('preprocess', content, url, next);
-    
     // Preprocess by plugin
     content = app.pluginProcess('preprocess', content);
-
     if (app.params.preprocess) {
         content = app.params.preprocess(content, url, next);
         //this should handle backwards compatibility
@@ -607,7 +542,6 @@ app.loadPage = function (view, options) {
     var url = options.url;
     var content = options.content;
     var pushState = options.pushState;
-
     if (!view.allowPageChange) return false;
     if (url && view.url === url && !options.reload) return false;
     view.allowPageChange = false;
@@ -616,7 +550,7 @@ app.loadPage = function (view, options) {
         app.xhr = false;
     }
     function proceed(content) {
-        if (app.params.pushState && !options.reloadPrevious)  {
+        if (app.params.pushState && !options.reloadPrevious) {
             if (typeof pushState === 'undefined') pushState = true;
             var pushStateRoot = app.params.pushStateRoot || '';
             var method = options.reload ? 'replaceState' : 'pushState';
@@ -630,6 +564,7 @@ app.loadPage = function (view, options) {
             else _load(view, url, content, options);
         });
     }
+
     if (content) {
         proceed(content);
         return;
@@ -642,42 +577,34 @@ app.loadPage = function (view, options) {
         proceed(content);
     });
 };
-
 app.goBack = function (view, options) {
     if (!view.allowPageChange) return false;
-
     var url = options.url;
     var animatePages = options.animatePages;
     var preloadOnly = options.preloadOnly;
     var pushState = options.pushState;
     var ignoreCache = options.ignoreCache;
     var forceUrl = options.forceUrl;
-
     view.allowPageChange = false;
     if (app.xhr && view.xhr && view.xhr === app.xhr) {
         app.xhr.abort();
         app.xhr = false;
     }
     app.pluginHook('goBack', view, url, preloadOnly);
-
-    if (app.params.pushState)  {
+    if (app.params.pushState) {
         if (typeof pushState === 'undefined') pushState = true;
         if (!preloadOnly && history.state && pushState) {
             history.back();
         }
     }
-
     var viewContainer = $(view.container),
         pagesContainer = $(view.pagesContainer),
         pagesInView = pagesContainer.children('.page'),
         oldPage, newPage, oldNavbarInner, newNavbarInner, navbar, dynamicNavbar;
-
     if (typeof animatePages === 'undefined') animatePages = view.params.animatePages;
-
     function _animate() {
         // Page before animation callback
         app.pageAnimCallbacks('before', view, {pageContainer: newPage[0], url: url, position: 'left', oldPage: oldPage, newPage: newPage});
-
         function afterAnimation() {
             app.afterGoBack(view, oldPage[0], newPage[0]);
             app.pageAnimCallbacks('after', view, {pageContainer: newPage[0], url: url, position: 'left', oldPage: oldPage, newPage: newPage});
@@ -686,14 +613,12 @@ app.goBack = function (view, options) {
         if (animatePages) {
             // Set pages before animation
             _animatePages(newPage, oldPage, 'to-right', view);
-
             // Dynamic navbar animation
             if (dynamicNavbar) {
                 setTimeout(function () {
                     _animateNavbars(newNavbarInner, oldNavbarInner, 'to-right', view);
                 }, 0);
             }
-            
             newPage.animationEnd(function () {
                 afterAnimation();
             });
@@ -703,19 +628,17 @@ app.goBack = function (view, options) {
             afterAnimation();
         }
     }
+
     function _preload() {
         newPage = _findElement('.page', app._tempDomElement, view);
-
         // If pages not found or there are still more than one, exit
         if (!newPage) {
             view.allowPageChange = true;
             return;
         }
         newPage.addClass('page-on-left');
-
         // Find old page (should be the only one)
         oldPage = $(pagesInView[0]);
-
         // Dynamic navbar
         if (view.params.dynamicNavbar) {
             dynamicNavbar = true;
@@ -724,9 +647,7 @@ app.goBack = function (view, options) {
             if (!newNavbarInner) {
                 dynamicNavbar = false;
             }
-            
         }
-
         if (dynamicNavbar) {
             navbar = viewContainer.find('.navbar');
             oldNavbarInner = navbar.find('.navbar-inner');
@@ -736,19 +657,15 @@ app.goBack = function (view, options) {
                 oldNavbarInner = navbar.find('.navbar-inner');
             }
             navbar.prepend(newNavbarInner[0]);
-            
         }
         // Prepend new Page and add classes for animation
         pagesContainer.prepend(newPage[0]);
-
         // Page Init Events
         app.pageInitCallback(view, newPage[0], url, 'left', dynamicNavbar ? newNavbarInner[0] : undefined);
-
         // Navbar init event
         if (dynamicNavbar) {
             app.navbarInitCallback(view, newPage[0], navbar[0], newNavbarInner[0], url, 'right');
         }
-
         if (dynamicNavbar && newNavbarInner.hasClass('navbar-on-left') && animatePages) {
             newNavbarInner.find('.sliding').each(function () {
                 var sliding = $(this);
@@ -763,20 +680,16 @@ app.goBack = function (view, options) {
                 sliding.transform('translate3d(' + (this.f7NavbarLeftOffset) + 'px,0,0)');
             });
         }
-
         // Exit if we need only to preload page
         if (preloadOnly) {
             newPage.addClass('page-on-left');
             view.allowPageChange = true;
             return;
         }
-
         // Update View's URL
         view.url = url;
-
         // Force reLayout
         var clientLeft = newPage[0].clientLeft;
-
         _animate();
     }
 
@@ -788,11 +701,9 @@ app.goBack = function (view, options) {
         }
         // Update View's URL
         view.url = view.history[view.history.length - 2];
-
         // Define old and new pages
         newPage = $(pagesInView[pagesInView.length - 2]);
         oldPage = $(pagesInView[pagesInView.length - 1]);
-
         // Dynamic navbar
         if (view.params.dynamicNavbar) {
             dynamicNavbar = true;
@@ -812,25 +723,20 @@ app.goBack = function (view, options) {
             }
             pagesInView = pagesContainer.children('.page');
         }
-
         if (url && url.indexOf('#') === 0) url = undefined;
-
         if ((forceUrl && !url) || !forceUrl) {
             url = view.history[view.history.length - 2];
         }
-
         if (!url) {
             view.allowPageChange = true;
             return;
         }
-
         // Modify history
         if (forceUrl) {
             if (view.history.indexOf(url)) {
                 view.history = view.history.slice(0, view.history.indexOf(url) + 2);
             }
         }
-
         // Check current url is in cache?
         if (!view.params.domCache && (url in view.contentCache)) {
             var _cache = view.contentCache[url];
@@ -864,7 +770,6 @@ app.afterGoBack = function (view, oldPage, newPage) {
         var inners = $(view.container).find('.navbar-inner:not(.cached)');
         var oldNavbar = $(inners[1]).remove();
         var newNavbar = $(inners[0]).removeClass('navbar-on-left navbar-from-left-to-center').addClass('navbar-on-center');
-
         if (view.params.preloadPreviousPage && view.params.domCache) {
             var cachedNavs = $(view.container).find('.navbar-inner.cached');
             $(cachedNavs[cachedNavs.length - 1]).removeClass('cached');
@@ -872,15 +777,12 @@ app.afterGoBack = function (view, oldPage, newPage) {
     }
     // Update View's History
     var previousURL = view.history.pop();
-    
     // Check previous page is content based only and remove it from content cache
     if (!view.params.domCache && previousURL && previousURL.indexOf('#content-') > -1 && (previousURL in view.contentCache)) {
         view.contentCache[previousURL] = null;
         delete view.contentCache[previousURL];
     }
-    
     if (app.params.pushState) app.pushStateClearQueue();
-
     // Preload previous page
     if (view.params.preloadPreviousPage) {
         if (view.params.domCache) {
@@ -889,5 +791,4 @@ app.afterGoBack = function (view, oldPage, newPage) {
         }
         app.goBack(view, {preloadOnly: true});
     }
-
 };

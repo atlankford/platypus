@@ -31,7 +31,7 @@ $.serializeObject = function (obj) {
     for (var prop in obj) {
         if ($.isArray(obj[prop])) {
             var toPush = [];
-            for (var i = 0; i < obj[prop].length; i ++) {
+            for (var i = 0; i < obj[prop].length; i++) {
                 toPush.push(prop + '=' + obj[prop][i]);
             }
             resultArray.push(toPush.join(separator));
@@ -41,18 +41,14 @@ $.serializeObject = function (obj) {
             resultArray.push(prop + '=' + obj[prop]);
         }
     }
-
     return resultArray.join(separator);
 };
-
 $.getTranslate = function (el, axis) {
     var matrix, curTransform, curStyle, transformMatrix;
-
     // automatic axis detection
     if (typeof axis === 'undefined') {
         axis = 'x';
     }
-
     curStyle = window.getComputedStyle(el, null);
     if (window.WebKitCSSMatrix) {
         // Some old versions of Webkit choke when 'none' is passed; pass
@@ -60,10 +56,9 @@ $.getTranslate = function (el, axis) {
         transformMatrix = new WebKitCSSMatrix(curStyle.webkitTransform === 'none' ? '' : curStyle.webkitTransform);
     }
     else {
-        transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform  || curStyle.transform || curStyle.getPropertyValue('transform').replace('translate(', 'matrix(1, 0, 0, 1,');
+        transformMatrix = curStyle.MozTransform || curStyle.OTransform || curStyle.MsTransform || curStyle.msTransform || curStyle.transform || curStyle.getPropertyValue('transform').replace('translate(', 'matrix(1, 0, 0, 1,');
         matrix = transformMatrix.toString().split(',');
     }
-
     if (axis === 'x') {
         //Latest Chrome and webkits Fix
         if (window.WebKitCSSMatrix)
@@ -86,10 +81,8 @@ $.getTranslate = function (el, axis) {
         else
             curTransform = parseFloat(matrix[5]);
     }
-    
     return curTransform || 0;
 };
-
 $.requestAnimationFrame = function (callback) {
     if (window.requestAnimationFrame) return window.requestAnimationFrame(callback);
     else if (window.webkitRequestAnimationFrame) return window.webkitRequestAnimationFrame(callback);
@@ -99,10 +92,8 @@ $.requestAnimationFrame = function (callback) {
     }
 };
 $.supportTouch = !!(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
-
 // Link to prototype
 $.fn = Dom7.prototype;
-
 // Plugins
 $.fn.scrollTo = function (left, top, duration) {
     return this.each(function () {
@@ -144,30 +135,28 @@ $.fn.scrollTo = function (left, top, duration) {
             var doneLeft, doneTop, done;
             if (animateTop) scrollTop = currentTop + ((time - startTime) / duration * (newTop - currentTop));
             if (animateLeft) scrollLeft = currentLeft + ((time - startTime) / duration * (newLeft - currentLeft));
-
-            if (animateTop && newTop > currentTop && scrollTop >= newTop)  {
+            if (animateTop && newTop > currentTop && scrollTop >= newTop) {
                 el.scrollTop = newTop;
                 done = true;
             }
-            if (animateTop && newTop < currentTop && scrollTop <= newTop)  {
+            if (animateTop && newTop < currentTop && scrollTop <= newTop) {
                 el.scrollTop = newTop;
                 done = true;
             }
-
-            if (animateLeft && newLeft > currentLeft && scrollLeft >= newLeft)  {
+            if (animateLeft && newLeft > currentLeft && scrollLeft >= newLeft) {
                 el.scrollLeft = newLeft;
                 done = true;
             }
-            if (animateLeft && newLeft < currentLeft && scrollLeft <= newLeft)  {
+            if (animateLeft && newLeft < currentLeft && scrollLeft <= newLeft) {
                 el.scrollLeft = newLeft;
                 done = true;
             }
-
             if (done) return;
             if (animateTop) el.scrollTop = scrollTop;
             if (animateLeft) el.scrollLeft = scrollLeft;
             $.requestAnimationFrame(render);
         }
+
         $.requestAnimationFrame(render);
     });
 };

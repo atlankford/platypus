@@ -1,6 +1,6 @@
 /* ===============================================================================
-************   Infinite Scroll   ************
-=============================================================================== */
+ ************   Infinite Scroll   ************
+ =============================================================================== */
 function handleInfiniteScroll() {
     /*jshint validthis:true */
     var inf = this;
@@ -23,7 +23,6 @@ app.attachInfiniteScroll = function (infiniteContent) {
 app.detachInfiniteScroll = function (infiniteContent) {
     $(infiniteContent).off('scroll', handleInfiniteScroll);
 };
-
 app.initInfiniteScroll = function (pageContainer) {
     pageContainer = $(pageContainer);
     var infiniteContent = pageContainer.find('.infinite-scroll');
@@ -32,5 +31,6 @@ app.initInfiniteScroll = function (pageContainer) {
         app.detachInfiniteScroll(infiniteContent);
         pageContainer.off('pageBeforeRemove', detachEvents);
     }
+
     pageContainer.on('pageBeforeRemove', detachEvents);
 };

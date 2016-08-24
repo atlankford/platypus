@@ -1,6 +1,6 @@
 /*======================================================
-************   Navbars && Toolbars   ************
-======================================================*/
+ ************   Navbars && Toolbars   ************
+ ======================================================*/
 // On Navbar Init Callback
 app.navbarInitCallback = function (view, pageContainer, navbar, navbarInnerContainer, url, position) {
     var _navbar = {
@@ -19,10 +19,8 @@ app.navbarInitCallback = function (view, pageContainer, navbar, navbarInnerConta
         navbar: _navbar,
         page: _page
     };
-
     // Plugin hook
     app.pluginHook('navbarInit', _navbar, _page);
-    
     // Navbar Init Callback
     $(navbarInnerContainer).trigger('navbarInit', eventData);
 };
@@ -41,7 +39,6 @@ app.sizeNavbars = function (viewContainer) {
             navbarWidth = tt.width(),
             onLeft = tt.hasClass('navbar-on-left'),
             currLeft, diff;
-
         if (noRight) {
             currLeft = navbarWidth - centerWidth;
         }
@@ -66,12 +63,10 @@ app.sizeNavbars = function (viewContainer) {
         }
         // RTL inverter
         var inverter = app.rtl ? -1 : 1;
-        
         // Center left
         var centerLeft = diff;
         if (app.rtl && noLeft && noRight && center.length > 0) centerLeft = -centerLeft;
         center.css({left: centerLeft + 'px'});
-
         if (center.hasClass('sliding')) {
             center[0].f7NavbarLeftOffset = -(currLeft + diff) * inverter;
             center[0].f7NavbarRightOffset = (navbarWidth - currLeft - diff - centerWidth) * inverter;
@@ -99,7 +94,6 @@ app.sizeNavbars = function (viewContainer) {
             }
             if (onLeft) right.transform('translate3d(' + right[0].f7NavbarLeftOffset + 'px, 0, 0)');
         }
-        
     });
 };
 app.hideNavbar = function (viewContainer) {

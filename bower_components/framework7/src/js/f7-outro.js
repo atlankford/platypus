@@ -1,3 +1,4 @@
-    //Return instance        
-    return app;
-};
+//Return instance
+return app;
+}
+;

@@ -1,38 +1,35 @@
 /*===============================================================================
-************   Handle clicks and make them fast (on tap);   ************
-===============================================================================*/
+ ************   Handle clicks and make them fast (on tap);   ************
+ ===============================================================================*/
 app.initClickEvents = function () {
     function handleClicks(e) {
         /*jshint validthis:true */
         var clicked = $(this);
         var url = clicked.attr('href');
         var isLink = clicked[0].nodeName.toLowerCase() === 'a';
-
         // Str to boolean for data attributes
         function toBoolean(str) {
             if (str === 'false') return false;
             if (str === 'true') return true;
             return undefined;
         }
-        // Check if link is external 
+
+        // Check if link is external
         if (isLink) {
             /*jshint shadow:true */
             for (var i = 0; i < app.params.externalLinks.length; i++) {
                 if (clicked.hasClass(app.params.externalLinks[i])) {
                     return;
                 }
-
                 if (clicked[0].rel === app.params.externalLinks[i]) {
                     return;
                 }
             }
         }
-
         // Smart Select
         if (clicked.hasClass('smart-select')) {
             if (app.smartSelectOpen) app.smartSelectOpen(clicked);
         }
-        
         // Open Panel
         if (clicked.hasClass('open-panel')) {
             if ($('.panel').length === 1) {
@@ -48,7 +45,6 @@ app.initClickEvents = function () {
         if (clicked.hasClass('close-panel')) {
             app.closePanel();
         }
-
         if (clicked.hasClass('panel-overlay') && app.params.panelsCloseByOutside) {
             app.closePanel();
         }
@@ -98,14 +94,12 @@ app.initClickEvents = function () {
                 app.closeModal('.modal.modal-in');
             if ($('.actions-modal.modal-in').length > 0 && app.params.actionsCloseByOutside)
                 app.closeModal('.actions-modal.modal-in');
-            
             if ($('.popover.modal-in').length > 0) app.closeModal('.popover.modal-in');
         }
         if (clicked.hasClass('popup-overlay')) {
             if ($('.popup.modal-in').length > 0 && app.params.popupCloseByOutside)
                 app.closeModal('.popup.modal-in');
         }
-
         // Tabs
         if (clicked.hasClass('tab-link')) {
             app.showTab(clicked.attr('data-tab') || clicked.attr('href'), clicked);
@@ -129,7 +123,6 @@ app.initClickEvents = function () {
             else {
                 app.swipeoutDelete(clicked.parents('.swipeout'));
             }
-                
         }
         // Sortable
         if (clicked.hasClass('toggle-sortable')) {
@@ -172,7 +165,6 @@ app.initClickEvents = function () {
                 }
             }
             if (!view) return;
-
             var animatePages;
             if (clicked.attr('data-animatePages')) {
                 animatePages = toBoolean(clicked.attr('data-animatePages'));
@@ -189,10 +181,10 @@ app.initClickEvents = function () {
                 reloadPrevious: toBoolean(clicked.attr('data-reloadPrevious')),
                 url: clicked.attr('href')
             };
-            
             if (clicked.hasClass('back')) view.goBack(options);
             else view.loadPage(options);
         }
     }
+
     $(document).on('click', 'a, .open-panel, .close-panel, .panel-overlay, .modal-overlay, .popup-overlay, .swipeout-delete, .close-popup, .open-popup, .open-popover, .open-login-screen, .close-login-screen .smart-select, .toggle-sortable, .open-sortable, .close-sortable, .accordion-item-toggle', handleClicks);
 };

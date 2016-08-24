@@ -1,6 +1,6 @@
 /*======================================================
-************   Handle Browser's History   ************
-======================================================*/
+ ************   Handle Browser's History   ************
+ ======================================================*/
 app.pushStateQueue = [];
 app.pushStateClearQueue = function () {
     if (app.pushStateQueue.length === 0) return;
@@ -17,7 +17,6 @@ app.pushStateClearQueue = function () {
         app.loadPage(queue.view, {content: queue.stateContent, animatePages: animatePages, pushState: false});
     }
 };
-
 app.initPushState = function () {
     var blockPopstate = true;
     $(window).on('load', function () {
@@ -35,7 +34,7 @@ app.initPushState = function () {
         var state = e.state;
         if (!state) {
             state = {
-                url : mainView.history[0]
+                url: mainView.history[0]
             };
         }
         var stateUrl = state && state.url || undefined;
@@ -46,7 +45,7 @@ app.initPushState = function () {
             if (mainView.history.indexOf(stateUrl) >= 0) {
                 // Go Back
                 if (mainView.allowPageChange) {
-                    app.goBack(mainView, {url:undefined, animatePages: animatePages, pushState: false, preloadOnly:false});
+                    app.goBack(mainView, {url: undefined, animatePages: animatePages, pushState: false, preloadOnly: false});
                 }
                 else {
                     app.pushStateQueue.push({
@@ -58,7 +57,7 @@ app.initPushState = function () {
             else if (stateUrl && !stateContent) {
                 // Load Page
                 if (mainView.allowPageChange) {
-                    app.loadPage(mainView, {url:stateUrl, animatePages: animatePages, pushState: false});
+                    app.loadPage(mainView, {url: stateUrl, animatePages: animatePages, pushState: false});
                 }
                 else {
                     app.pushStateQueue.unshift({
@@ -71,7 +70,7 @@ app.initPushState = function () {
             else if (stateContent) {
                 // Load Page
                 if (mainView.allowPageChange) {
-                    app.loadPage(mainView, {content:stateContent, animatePages: animatePages, pushState: false});
+                    app.loadPage(mainView, {content: stateContent, animatePages: animatePages, pushState: false});
                 }
                 else {
                     app.pushStateQueue.unshift({
@@ -83,5 +82,6 @@ app.initPushState = function () {
             }
         }
     }
+
     $(window).on('popstate', handlePopState);
 };

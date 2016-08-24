@@ -1,6 +1,6 @@
 /*===============================================================================
-************   Global/Document event handlers    ************
-===============================================================================*/
+ ************   Global/Document event handlers    ************
+ ===============================================================================*/
 app.globalEventListeners = {};
 app.initGlobalEventListeners = function () {
     function addHandler(eventName) {
@@ -12,6 +12,7 @@ app.initGlobalEventListeners = function () {
         });
         app.globalEventListeners[eventName].initialized = true;
     }
+
     for (var eventName in app.globalEventListeners) {
         if (!app.globalEventListeners[eventName].initialized) addHandler(eventName);
     }

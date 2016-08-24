@@ -1,6 +1,6 @@
 /*======================================================
-************   Panels   ************
-======================================================*/
+ ************   Panels   ************
+ ======================================================*/
 app.allowPanelOpen = true;
 app.openPanel = function (panelPosition) {
     if (!app.allowPanelOpen) return false;
@@ -14,14 +14,12 @@ app.openPanel = function (panelPosition) {
     if (panel.find('.' + app.params.viewClass).length > 0) {
         if (app.sizeNavbars) app.sizeNavbars(panel.find('.' + app.params.viewClass)[0]);
     }
-
     // Trigger reLayout
     var clientLeft = panel[0].clientLeft;
-    
     // Transition End;
     var transitionEndTarget = effect === 'reveal' ? $('.' + app.params.viewsClass) : panel;
     var openedTriggered = false;
-    
+
     function panelTransitionEnd() {
         transitionEndTarget.transitionEnd(function (e) {
             if ($(e.target).is(transitionEndTarget)) {
@@ -36,8 +34,8 @@ app.openPanel = function (panelPosition) {
             else panelTransitionEnd();
         });
     }
-    panelTransitionEnd();
 
+    panelTransitionEnd();
     $('body').addClass('with-panel-' + panelPosition + '-' + effect);
     return true;
 };
@@ -50,7 +48,6 @@ app.closePanel = function () {
     var transitionEndTarget = effect === 'reveal' ? $('.' + app.params.viewsClass) : activePanel;
     activePanel.trigger('close');
     app.allowPanelOpen = false;
-
     transitionEndTarget.transitionEnd(function () {
         if (activePanel.hasClass('active')) return;
         activePanel.css({display: ''});
@@ -58,21 +55,18 @@ app.closePanel = function () {
         $('body').removeClass('panel-closing');
         app.allowPanelOpen = true;
     });
-
     $('body').addClass('panel-closing').removeClass('with-panel-' + panelPosition + '-' + effect);
 };
 /*======================================================
-************   Swipe panels   ************
-======================================================*/
+ ************   Swipe panels   ************
+ ======================================================*/
 app.initSwipePanels = function () {
     var panel = $('.panel.panel-' + app.params.swipePanel);
     if (panel.length === 0) return;
-
     var panelOverlay = $('.panel-overlay');
     var isTouched, isMoved, isScrolling, touchesStart = {}, touchStartTime, touchesDiff, translate, opened, panelWidth, effect, direction, side;
     var views = $('.' + app.params.viewsClass);
     side = app.params.swipePanel;
-
     function handleTouchStart(e) {
         if (!app.allowPanelOpen || !app.params.swipePanel || isTouched) return;
         if ($('.modal-in, .photo-browser-in').length > 0) return;
@@ -101,10 +95,10 @@ app.initSwipePanels = function () {
         isMoved = false;
         isTouched = true;
         isScrolling = undefined;
-        
         touchStartTime = (new Date()).getTime();
         direction = undefined;
     }
+
     function handleTouchMove(e) {
         if (!isTouched) return;
         if (e.f7PreventPanelSwipe) return;
@@ -124,23 +118,20 @@ app.initSwipePanels = function () {
             else {
                 direction = 'to-left';
             }
-
             if (
                 side === 'left' &&
                 (
                     direction === 'to-left' && !panel.hasClass('active')
-                ) ||
+                    ) ||
                 side === 'right' &&
                 (
                     direction === 'to-right' && !panel.hasClass('active')
-                )
-            )
-            {
+                    )
+                ) {
                 isTouched = false;
                 return;
             }
         }
-
         if (app.params.swipePanelNoFollow) {
             var timeDiff = (new Date()).getTime() - touchStartTime;
             if (timeDiff < 300) {
@@ -157,7 +148,6 @@ app.initSwipePanels = function () {
             isMoved = false;
             return;
         }
-
         if (!isMoved) {
             effect = panel.hasClass('panel-cover') ? 'cover' : 'reveal';
             panel.show();
@@ -169,24 +159,20 @@ app.initSwipePanels = function () {
                 if (app.sizeNavbars) app.sizeNavbars(panel.find('.' + app.params.viewClass)[0]);
             }
         }
-
         isMoved = true;
-
         e.preventDefault();
         var threshold = opened ? 0 : -app.params.swipePanelThreshold;
         if (side === 'right') threshold = -threshold;
-        
         touchesDiff = pageX - touchesStart.x + threshold;
-
         if (side === 'right') {
-            translate = touchesDiff  - (opened ? panelWidth : 0);
+            translate = touchesDiff - (opened ? panelWidth : 0);
             if (translate > 0) translate = 0;
             if (translate < -panelWidth) {
                 translate = -panelWidth;
             }
         }
         else {
-            translate = touchesDiff  + (opened ? panelWidth : 0);
+            translate = touchesDiff + (opened ? panelWidth : 0);
             if (translate < 0) translate = 0;
             if (translate > panelWidth) {
                 translate = panelWidth;
@@ -202,6 +188,7 @@ app.initSwipePanels = function () {
             app.pluginHook('swipePanelSetTransform', views[0], panel[0], Math.abs(translate / panelWidth));
         }
     }
+
     function handleTouchEnd(e) {
         if (!isTouched || !isMoved) {
             isTouched = false;
@@ -213,7 +200,6 @@ app.initSwipePanels = function () {
         var timeDiff = (new Date()).getTime() - touchStartTime;
         var action;
         var edge = (translate === 0 || Math.abs(translate) === panelWidth);
-
         if (!opened) {
             if (translate === 0) {
                 action = 'reset';
@@ -221,7 +207,7 @@ app.initSwipePanels = function () {
             else if (
                 timeDiff < 300 && Math.abs(translate) > 0 ||
                 timeDiff >= 300 && (Math.abs(translate) >= panelWidth / 2)
-            ) {
+                ) {
                 action = 'swap';
             }
             else {
@@ -235,7 +221,7 @@ app.initSwipePanels = function () {
             else if (
                 timeDiff < 300 && Math.abs(translate) >= 0 ||
                 timeDiff >= 300 && (Math.abs(translate) <= panelWidth / 2)
-            ) {
+                ) {
                 if (side === 'left' && translate === panelWidth) action = 'reset';
                 else action = 'swap';
             }
@@ -286,6 +272,7 @@ app.initSwipePanels = function () {
         panel.transition('').transform('');
         panelOverlay.css({display: ''}).transform('');
     }
+
     $(document).on(app.touchEvents.start, handleTouchStart);
     $(document).on(app.touchEvents.move, handleTouchMove);
     $(document).on(app.touchEvents.end, handleTouchEnd);

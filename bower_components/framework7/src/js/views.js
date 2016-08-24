@@ -1,6 +1,6 @@
 /*======================================================
-************   Views   ************
-======================================================*/
+ ************   Views   ************
+ ======================================================*/
 app.views = [];
 var View = function (selector, params) {
     var defaults = {
@@ -15,7 +15,6 @@ var View = function (selector, params) {
         animatePages: app.params.animatePages,
         preloadPreviousPage: app.params.preloadPreviousPage
     };
-
     params = params || {};
     for (var def in defaults) {
         if (typeof params[def] === 'undefined') {
@@ -25,17 +24,13 @@ var View = function (selector, params) {
     // View
     var view = this;
     view.params = params;
-
     // Selector
     view.selector = selector;
-
     // Container
     var container = $(selector);
     view.container = container[0];
-    
     // Location
     var docLocation = document.location.href;
-
     // History
     view.history = [];
     var viewURL = docLocation;
@@ -48,26 +43,19 @@ var View = function (selector, params) {
         else {
             if (viewURL.indexOf(pushStateSeparator) >= 0 && viewURL.indexOf(pushStateSeparator + '#') < 0) viewURL = viewURL.split(pushStateSeparator)[0];
         }
-            
     }
     view.url = container.attr('data-url') || view.params.url || viewURL;
-
     // Store to history main view's url
     if (view.url) {
         view.history.push(view.url);
     }
-
     // Content cache
     view.contentCache = {};
-
     // Store View in element for easy access
     container[0].f7View = view;
-
     // Pages
     view.pagesContainer = container.find('.pages')[0];
-
     view.allowPageChange = true;
-
     // Active Page
     if (!view.activePage) {
         var currentPage = $(view.pagesContainer).find('.page-on-center');
@@ -78,7 +66,6 @@ var View = function (selector, params) {
         }
         if (currentPage.length > 0) {
             currentPageData = currentPage[0].f7PageData;
-        
         }
         if (currentPageData) {
             currentPageData.view = view;
@@ -87,10 +74,8 @@ var View = function (selector, params) {
             currentPage[0].f7PageData = currentPageData;
         }
     }
-
     // Is main
     view.main = container.hasClass(app.params.viewMainClass);
-
     // Touch events
     var isTouched = false,
         isMoved = false,
@@ -110,7 +95,6 @@ var View = function (selector, params) {
         previousNavBackIcon,
         dynamicNavbar,
         el;
-
     view.handleTouchStart = function (e) {
         if (!allowViewTouchMove || !view.params.swipeBackPage || isTouched || app.swipeoutOpenedEl) return;
         isMoved = false;
@@ -121,7 +105,6 @@ var View = function (selector, params) {
         touchStartTime = (new Date()).getTime();
         dynamicNavbar = view.params.dynamicNavbar && container.find('.navbar-inner').length > 1;
     };
-
     view.handleTouchMove = function (e) {
         if (!isTouched) return;
         var pageX = e.type === 'touchmove' ? e.targetTouches[0].pageX : e.pageX;
@@ -133,7 +116,6 @@ var View = function (selector, params) {
             isTouched = false;
             return;
         }
-        
         if (!isMoved) {
             var cancel = false;
             // Calc values during first move fired
@@ -174,15 +156,12 @@ var View = function (selector, params) {
         e.f7PreventPanelSwipe = true;
         isMoved = true;
         e.preventDefault();
-
         // RTL inverter
         var inverter = app.rtl ? -1 : 1;
-
         // Touches diff
         touchesDiff = (pageX - touchesStart.x - view.params.swipeBackPageThreshold) * inverter;
         if (touchesDiff < 0) touchesDiff = 0;
         var percentage = touchesDiff / viewContainerWidth;
-
         // Swipe Back Callback
         var callbackData = {
             percentage: percentage,
@@ -195,7 +174,6 @@ var View = function (selector, params) {
             view.params.onSwipeBackMove(callbackData);
         }
         container.trigger('swipebackmove', callbackData);
-
         // Transform pages
         var activePageTranslate = touchesDiff * inverter;
         var previousPageTranslate = (touchesDiff / 5 - viewContainerWidth / 5) * inverter;
@@ -203,13 +181,10 @@ var View = function (selector, params) {
             activePageTranslate = Math.round(activePageTranslate);
             previousPageTranslate = Math.round(previousPageTranslate);
         }
-
         activePage.transform('translate3d(' + activePageTranslate + 'px,0,0)');
         if (view.params.swipeBackPageBoxShadow && app.device.os !== 'android') activePage[0].style.boxShadow = '0px 0px 12px rgba(0,0,0,' + (0.5 - 0.5 * percentage) + ')';
-
         previousPage.transform('translate3d(' + previousPageTranslate + 'px,0,0)');
         previousPage[0].style.opacity = 0.9 + 0.1 * percentage;
-
         // Dynamic Navbars Animation
         if (dynamicNavbar) {
             var i;
@@ -243,7 +218,6 @@ var View = function (selector, params) {
             }
         }
     };
-
     view.handleTouchEnd = function (e) {
         if (!isTouched || !isMoved) {
             isTouched = false;
@@ -266,8 +240,8 @@ var View = function (selector, params) {
         var pageChanged = false;
         // Swipe back to previous page
         if (
-                timeDiff < 300 && touchesDiff > 10 ||
-                timeDiff >= 300 && touchesDiff > viewContainerWidth / 2
+            timeDiff < 300 && touchesDiff > 10 ||
+            timeDiff >= 300 && touchesDiff > viewContainerWidth / 2
             ) {
             activePage.removeClass('page-on-center').addClass('page-on-right');
             previousPage.removeClass('page-on-left').addClass('page-on-center');
@@ -282,18 +256,16 @@ var View = function (selector, params) {
         $([activePage[0], previousPage[0]]).transform('').css({opacity: '', boxShadow: ''}).addClass('page-transitioning');
         if (dynamicNavbar) {
             activeNavElements.css({opacity: ''})
-            .each(function () {
-                var translate = pageChanged ? this.f7NavbarRightOffset : 0;
-                var sliding = $(this);
-                sliding.transform('translate3d(' + translate + 'px,0,0)');
-                if (app.params.animateNavBackIcon) {
-                    if (sliding.hasClass('left') && activeNavBackIcon.length > 0) {
-                        activeNavBackIcon.addClass('page-transitioning').transform('translate3d(' + -translate + 'px,0,0)');
+                .each(function () {
+                    var translate = pageChanged ? this.f7NavbarRightOffset : 0;
+                    var sliding = $(this);
+                    sliding.transform('translate3d(' + translate + 'px,0,0)');
+                    if (app.params.animateNavBackIcon) {
+                        if (sliding.hasClass('left') && activeNavBackIcon.length > 0) {
+                            activeNavBackIcon.addClass('page-transitioning').transform('translate3d(' + -translate + 'px,0,0)');
+                        }
                     }
-                }
-
-            }).addClass('page-transitioning');
-
+                }).addClass('page-transitioning');
             previousNavElements.transform('').css({opacity: ''}).each(function () {
                 var translate = pageChanged ? 0 : this.f7NavbarLeftOffset;
                 var sliding = $(this);
@@ -307,16 +279,13 @@ var View = function (selector, params) {
         }
         allowViewTouchMove = false;
         view.allowPageChange = false;
-
         if (pageChanged) {
             // Update View's URL
             var url = view.history[view.history.length - 2];
             view.url = url;
-            
             // Page before animation callback
             app.pageAnimCallbacks('before', view, {pageContainer: previousPage[0], url: url, position: 'left', newPage: previousPage, oldPage: activePage, swipeBack: true});
         }
-
         activePage.transitionEnd(function () {
             $([activePage[0], previousPage[0]]).removeClass('page-transitioning');
             if (dynamicNavbar) {
@@ -344,19 +313,17 @@ var View = function (selector, params) {
     view.detachEvents = function () {
         view.attachEvents(true);
     };
-
     // Init
     if (view.params.swipeBackPage) {
         view.attachEvents();
     }
-
     // Add view to app
     app.views.push(view);
     if (view.main) app.mainView = view;
-
     // Load methods
     var pageMethods = ('loadPage loadContent reloadPage reloadContent reloadPreviousPage reloadPreviousContent refreshPage refreshPreviousPage').split(' ');
-    function createPageMethod (methodName) {
+
+    function createPageMethod(methodName) {
         view[methodName] = function (options) {
             options = options || {};
             var method = methodName.toLowerCase();
@@ -382,10 +349,10 @@ var View = function (selector, params) {
             return app.loadPage(view, options);
         };
     }
+
     for (var i = 0; i < pageMethods.length; i++) {
         createPageMethod(pageMethods[i]);
     }
-
     view.goBack = function (options) {
         options = options || {};
         if (typeof options === 'string' || options.nodeType || 'length' in options) {
@@ -393,7 +360,6 @@ var View = function (selector, params) {
         }
         return app.goBack(view, options);
     };
-
     // Bars methods
     view.hideNavbar = function () {
         return app.hideNavbar(container);
@@ -407,7 +373,6 @@ var View = function (selector, params) {
     view.showToolbar = function () {
         return app.showToolbar(container);
     };
-
     // Push State on load
     if (app.params.pushState && view.main) {
         var pushStateUrl;
@@ -421,22 +386,17 @@ var View = function (selector, params) {
         if (pushStateUrl) {
             app.loadPage(view, {url: pushStateUrl, animatePages: pushStateAnimatePages, pushState: false});
         }
-            
     }
-
     // Destroy
     view.destroy = function () {
         view.detachEvents();
         view = undefined;
     };
-
     // Plugin hook
     app.pluginHook('addView', view);
-    
     // Return view
     return view;
 };
-
 app.addView = function (selector, params) {
     return new View(selector, params);
 };

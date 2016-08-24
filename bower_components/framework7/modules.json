@@ -1,6 +1,6 @@
 {
-    "core_intro" : {
-        "js" : [
+    "core_intro": {
+        "js": [
             "src/js/wrap-start.js",
             "src/js/f7-intro.js",
             "src/js/global-events.js",
@@ -12,7 +12,7 @@
             "src/js/resize.js",
             "src/js/panels.js"
         ],
-        "less" : [
+        "less": [
             "src/less/mixins.less",
             "src/less/intro.less",
             "src/less/grid.less",
@@ -31,8 +31,8 @@
             "src/less/preloader.less"
         ]
     },
-    "core_outro" : {
-        "js" : [
+    "core_outro": {
+        "js": [
             "src/js/plugins.js",
             "src/js/init.js",
             "src/js/f7-outro.js",
@@ -47,91 +47,90 @@
             "src/js/wrap-end.js",
             "src/js/template7.js"
         ],
-        "less" : [
+        "less": [
             "src/less/login-screen.less",
             "src/less/disabled.less",
             "src/less/colors.less"
         ]
     },
-
     "accordion": {
-        "js" : ["src/js/accordion.js"],
+        "js": ["src/js/accordion.js"],
         "less": ["src/less/accordion.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "searchbar": {
-        "js" : ["src/js/searchbar.js"],
+        "js": ["src/js/searchbar.js"],
         "less": ["src/less/searchbar.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "messages": {
-        "js" : ["src/js/messagebar.js", "src/js/messages.js"],
+        "js": ["src/js/messagebar.js", "src/js/messages.js"],
         "less": ["src/less/messagebar.less", "src/less/messages.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "modals": {
-        "js" : ["src/js/modals.js"],
+        "js": ["src/js/modals.js"],
         "less": ["src/less/modals.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "swipeout": {
-        "js" : ["src/js/swipeout.js"],
+        "js": ["src/js/swipeout.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "sortable": {
-        "js" : ["src/js/sortable.js.js"],
+        "js": ["src/js/sortable.js.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "smart-select": {
-        "js" : ["src/js/smart-select.js"],
+        "js": ["src/js/smart-select.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "pull-to-refresh": {
-        "js" : ["src/js/pull-to-refresh.js"],
+        "js": ["src/js/pull-to-refresh.js"],
         "less": ["src/less/pull-to-refresh.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "infinite-scroll": {
-        "js" : ["src/js/infinite-scroll.js"],
+        "js": ["src/js/infinite-scroll.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "tabs": {
-        "js" : ["src/js/tabs.js"],
+        "js": ["src/js/tabs.js"],
         "less": ["src/less/tabs.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "fast-clicks": {
-        "js" : ["src/js/fast-clicks.js"],
+        "js": ["src/js/fast-clicks.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "forms": {
-        "js" : ["src/js/forms-handler.js"],
+        "js": ["src/js/forms-handler.js"],
         "less": [],
-        "dependencies" : []
+        "dependencies": []
     },
     "push-state": {
-        "js" : ["src/js/push-state.js"],
-        "less" : [],
-        "dependencies" : []
+        "js": ["src/js/push-state.js"],
+        "less": [],
+        "dependencies": []
     },
     "slider": {
-        "js" : ["src/js/slider.js"],
+        "js": ["src/js/slider.js"],
         "less": ["src/less/slider.less"],
-        "dependencies" : []
+        "dependencies": []
     },
     "photo-browser": {
-        "js" : ["src/js/photo-browser.js"],
+        "js": ["src/js/photo-browser.js"],
         "less": ["src/less/photo-browser.less"],
-        "dependencies" : ["slider"]
+        "dependencies": ["slider"]
     },
     "notifications": {
-        "js" : ["src/js/notifications.js"],
+        "js": ["src/js/notifications.js"],
         "less": ["src/less/notifications.less"],
-        "dependencies" : []
+        "dependencies": []
     }
 }

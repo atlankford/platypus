@@ -1,15 +1,13 @@
 'use strict';
 /*===========================
-Framework 7
-===========================*/
+ Framework 7
+ ===========================*/
 window.Framework7 = function (params) {
 
     // App
     var app = this;
-
     // Version
     app.version = '0.9.6';
-
     // Default Parameters
     app.params = {
         cache: true,
@@ -83,33 +81,26 @@ window.Framework7 = function (params) {
         animatePages: true
 
     };
-
     // Extend defaults with parameters
     for (var param in params) {
         app.params[param] = params[param];
     }
-
     // DOM lib
     var $ = Dom7;
-
     // Template7 lib
     var t7 = Template7;
     app._compiledTemplates = {};
-
     // Touch events
     app.touchEvents = {
         start: app.support.touch ? 'touchstart' : 'mousedown',
         move: app.support.touch ? 'touchmove' : 'mousemove',
         end: app.support.touch ? 'touchend' : 'mouseup'
     };
-
     // Link to local storage
     app.ls = localStorage;
-
     // RTL
     app.rtl = $('body').css('direction') === 'rtl';
     if (app.rtl) $('html').attr('dir', 'rtl');
-
     // Overwrite statusbar overlay
     if (typeof app.params.statusbarOverlay !== 'undefined') {
         if (app.params.statusbarOverlay) $('html').addClass('with-statusbar-overlay');

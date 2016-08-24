@@ -1,6 +1,6 @@
 /*======================================================
-************   Messages   ************
-======================================================*/
+ ************   Messages   ************
+ ======================================================*/
 app.initMessages = function (pageContainer) {
     var page = $(pageContainer);
     var messages = page.find('.messages');
@@ -23,12 +23,12 @@ app.addMessage = function (props) {
     }
     var isPic = props.text.indexOf('<img') >= 0 ? 'message-pic' : '';
     var withAvatar = props.avatar ? 'message-with-avatar' : '';
-    var messageClass = 'message' + ' message-' + props.type + ' ' + isPic  + ' ' + withAvatar + ' message-appear';
+    var messageClass = 'message' + ' message-' + props.type + ' ' + isPic + ' ' + withAvatar + ' message-appear';
     html += '<div class="' + messageClass + '">' +
-                (props.name ? '<div class="message-name">' + props.name + '</div>' : '') +
-                '<div class="message-text">' + props.text + '</div>' +
-                (props.avatar ? '<div class="message-avatar" style="background-image:url(' + props.avatar + ')"></div>' : '') +
-            '</div>';
+        (props.name ? '<div class="message-name">' + props.name + '</div>' : '') +
+        '<div class="message-text">' + props.text + '</div>' +
+        (props.avatar ? '<div class="message-avatar" style="background-image:url(' + props.avatar + ')"></div>' : '') +
+        '</div>';
     if (newOnTop) messages.prepend(html);
     else messages.append(html);
     app.updateMessagesAngles(messages);
@@ -48,7 +48,6 @@ app.updateMessagesAngles = function (messages) {
             message.addClass('message-last');
         }
         else message.removeClass('message-last');
-
         if (prev.length === 0) {
             message.addClass('message-first');
         }
@@ -69,7 +68,6 @@ app.updateMessagesAngles = function (messages) {
             message.addClass('message-last');
         }
         else message.removeClass('message-last');
-
         if (prev.length === 0) {
             message.addClass('message-first');
         }

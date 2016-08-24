@@ -1,17 +1,14 @@
 /*======================================================
-************   Pull To Refresh   ************
-======================================================*/
+ ************   Pull To Refresh   ************
+ ======================================================*/
 app.initPullToRefresh = function (pageContainer) {
     var eventsTarget = $(pageContainer);
     if (!eventsTarget.hasClass('pull-to-refresh-content')) {
         eventsTarget = eventsTarget.find('.pull-to-refresh-content');
     }
     if (eventsTarget.length === 0) return;
-
     var isTouched, isMoved, touchesStart = {}, isScrolling, touchesDiff, touchStartTime, container, refresh = false, useTranslate = false, startTranslate = 0, translate, scrollTop, wasScrolled;
-
     container = eventsTarget;
-
     function handleTouchStart(e) {
         if (isTouched) {
             if (app.device.os === 'android') {
@@ -29,7 +26,7 @@ app.initPullToRefresh = function (pageContainer) {
         /*jshint validthis:true */
         container = $(this);
     }
-    
+
     function handleTouchMove(e) {
         if (!isTouched) return;
         var pageX = e.type === 'touchmove' ? e.targetTouches[0].pageX : e.pageX;
@@ -41,10 +38,8 @@ app.initPullToRefresh = function (pageContainer) {
             isTouched = false;
             return;
         }
-
         scrollTop = container[0].scrollTop;
-        if (typeof wasScrolled === 'undefined' && scrollTop !== 0) wasScrolled = true; 
-
+        if (typeof wasScrolled === 'undefined' && scrollTop !== 0) wasScrolled = true;
         if (!isMoved) {
             /*jshint validthis:true */
             container.removeClass('transitioning');
@@ -62,11 +57,9 @@ app.initPullToRefresh = function (pageContainer) {
         }
         isMoved = true;
         touchesDiff = pageY - touchesStart.y;
-        
         if (touchesDiff > 0 && scrollTop <= 0 || scrollTop < 0) {
             // iOS 8 fix
             if (app.device.os === 'ios' && parseInt(app.device.osVersion.split('.')[0], 10) > 7 && scrollTop === 0 && !wasScrolled) useTranslate = true;
-
             if (useTranslate) {
                 e.preventDefault();
                 translate = (Math.pow(touchesDiff, 0.85) + startTranslate);
@@ -82,12 +75,12 @@ app.initPullToRefresh = function (pageContainer) {
             }
         }
         else {
-            
             container.removeClass('pull-up pull-down');
             refresh = false;
             return;
         }
     }
+
     function handleTouchEnd(e) {
         if (!isTouched || !isMoved) {
             isTouched = false;
@@ -118,7 +111,6 @@ app.initPullToRefresh = function (pageContainer) {
     eventsTarget.on(app.touchEvents.start, handleTouchStart);
     eventsTarget.on(app.touchEvents.move, handleTouchMove);
     eventsTarget.on(app.touchEvents.end, handleTouchEnd);
-
     // Detach Events on page remove
     var page = eventsTarget.hasClass('page') ? eventsTarget : eventsTarget.parents('.page');
     if (page.length === 0) return;
@@ -126,13 +118,11 @@ app.initPullToRefresh = function (pageContainer) {
         eventsTarget.off(app.touchEvents.start, handleTouchStart);
         eventsTarget.off(app.touchEvents.move, handleTouchMove);
         eventsTarget.off(app.touchEvents.end, handleTouchEnd);
-
         page.off('pageBeforeRemove', detachEvents);
     }
+
     page.on('pageBeforeRemove', detachEvents);
-
 };
-
 app.pullToRefreshDone = function (container) {
     container = $(container);
     if (container.length === 0) container = $('.pull-to-refresh-content.refreshing');

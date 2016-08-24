@@ -97,7 +97,7 @@ Dom7.prototype = {
         }
     },
     // Transforms
-    transform : function (transform) {
+    transform: function (transform) {
         for (var i = 0; i < this.length; i++) {
             var elStyle = this[i].style;
             elStyle.webkitTransform = elStyle.MsTransform = elStyle.msTransform = elStyle.MozTransform = elStyle.OTransform = elStyle.transform = transform;
@@ -126,6 +126,7 @@ Dom7.prototype = {
                 }
             }
         }
+
         var events = eventName.split(' ');
         var i, j;
         for (i = 0; i < this.length; i++) {
@@ -148,7 +149,6 @@ Dom7.prototype = {
                 }
             }
         }
-
         return this;
     },
     off: function (eventName, targetSelector, listener, capture) {
@@ -188,6 +188,7 @@ Dom7.prototype = {
             listener(e);
             dom.off(eventName, targetSelector, proxy, capture);
         }
+
         dom.on(eventName, targetSelector, proxy, capture);
     },
     trigger: function (eventName, eventData) {
@@ -208,6 +209,7 @@ Dom7.prototype = {
     transitionEnd: function (callback) {
         var events = ['webkitTransitionEnd', 'transitionend', 'oTransitionEnd', 'MSTransitionEnd', 'msTransitionEnd'],
             i, j, dom = this;
+
         function fireCallBack(e) {
             /*jshint validthis:true */
             if (e.target !== this) return;
@@ -216,6 +218,7 @@ Dom7.prototype = {
                 dom.off(events[i], fireCallBack);
             }
         }
+
         if (callback) {
             for (i = 0; i < events.length; i++) {
                 dom.on(events[i], fireCallBack);
@@ -226,12 +229,14 @@ Dom7.prototype = {
     animationEnd: function (callback) {
         var events = ['webkitAnimationEnd', 'OAnimationEnd', 'MSAnimationEnd', 'animationend'],
             i, j, dom = this;
+
         function fireCallBack(e) {
             callback(e);
             for (i = 0; i < events.length; i++) {
                 dom.off(events[i], fireCallBack);
             }
         }
+
         if (callback) {
             for (i = 0; i < events.length; i++) {
                 dom.on(events[i], fireCallBack);
@@ -252,7 +257,6 @@ Dom7.prototype = {
                 return null;
             }
         }
-            
     },
     outerWidth: function (margins) {
         if (this.length > 0) {
@@ -275,7 +279,6 @@ Dom7.prototype = {
                 return null;
             }
         }
-            
     },
     outerHeight: function (margins) {
         if (this.length > 0) {
@@ -291,12 +294,12 @@ Dom7.prototype = {
             var el = this[0];
             var box = el.getBoundingClientRect();
             var body = document.body;
-            var clientTop  = el.clientTop  || body.clientTop  || 0;
+            var clientTop = el.clientTop || body.clientTop || 0;
             var clientLeft = el.clientLeft || body.clientLeft || 0;
-            var scrollTop  = window.pageYOffset || el.scrollTop;
+            var scrollTop = window.pageYOffset || el.scrollTop;
             var scrollLeft = window.pageXOffset || el.scrollLeft;
             return {
-                top: box.top  + scrollTop  - clientTop,
+                top: box.top + scrollTop - clientTop,
                 left: box.left + scrollLeft - clientLeft
             };
         }
@@ -339,7 +342,6 @@ Dom7.prototype = {
         }
         return this;
     },
-    
     //Dom manipulation
     each: function (callback) {
         for (var i = 0; i < this.length; i++) {
@@ -378,7 +380,6 @@ Dom7.prototype = {
             var el = this[0];
             if (el === document) return selector === document;
             if (el === window) return selector === window;
-
             if (el.matches) return el.matches(selector);
             else if (el.webkitMatchesSelector) return el.webkitMatchesSelector(selector);
             else if (el.mozMatchesSelector) return el.mozMatchesSelector(selector);
@@ -403,7 +404,6 @@ Dom7.prototype = {
             }
             return false;
         }
-        
     },
     indexOf: function (el) {
         for (var i = 0; i < this.length; i++) {
@@ -583,7 +583,7 @@ Dom7.prototype = {
         }
         return $($.unique(parents));
     },
-    find : function (selector) {
+    find: function (selector) {
         var foundElements = [];
         for (var i = 0; i < this.length; i++) {
             var found = this[i].querySelectorAll(selector);
@@ -597,7 +597,6 @@ Dom7.prototype = {
         var children = [];
         for (var i = 0; i < this.length; i++) {
             var childNodes = this[i].childNodes;
-
             for (var j = 0; j < childNodes.length; j++) {
                 if (!selector) {
                     if (childNodes[j].nodeType === 1) children.push(childNodes[j]);
@@ -619,11 +618,11 @@ Dom7.prototype = {
         return this.remove();
     }
 };
-
 // Shortcuts
 (function () {
     var shortcuts = ('click blur focus focusin focusout keyup keydown keypress submit change mousedown mousemove mouseup mouseenter mouseleave mouseout mouseover touchstart touchend touchmove resize scroll').split(' ');
     var notTrigger = ('resize scroll').split(' ');
+
     function createMethod(name) {
         Dom7.prototype[name] = function (handler) {
             var i;
@@ -638,6 +637,7 @@ Dom7.prototype = {
             }
         };
     }
+
     for (var i = 0; i < shortcuts.length; i++) {
         createMethod(shortcuts[i]);
     }

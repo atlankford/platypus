@@ -1,29 +1,25 @@
 /* ===============================================================================
-************   Tabs   ************
-=============================================================================== */
+ ************   Tabs   ************
+ =============================================================================== */
 app.showTab = function (tab, tabLink) {
     var newTab = $(tab);
     if (newTab.hasClass('active')) return false;
     if (newTab.length === 0) return false;
     var tabs = newTab.parent('.tabs');
     if (tabs.length === 0) return false;
-
     // Return swipeouts in hidden tabs
     app.allowSwipeout = true;
-
     // Animated tabs
     var isAnimatedTabs = tabs.parent().hasClass('tabs-animated-wrap');
     if (isAnimatedTabs) {
         tabs.transform('translate3d(' + -newTab.index() * 100 + '%,0,0)');
     }
-
     // Remove active class from old tabs
     var oldTab = tabs.children('.tab.active').removeClass('active');
     // Add active class to new tab
     newTab.addClass('active');
     // Trigger 'show' event on new tab
     newTab.trigger('show');
-
     // Update navbars in new tab
     if (!isAnimatedTabs && newTab.find('.navbar').length > 0) {
         // Find tab's view
@@ -32,7 +28,6 @@ app.showTab = function (tab, tabLink) {
         else viewContainer = newTab.parents('.' + app.params.viewClass)[0];
         app.sizeNavbars(viewContainer);
     }
-
     // Find related link for new tab
     if (tabLink) tabLink = $(tabLink);
     else {
@@ -47,7 +42,6 @@ app.showTab = function (tab, tabLink) {
         }
     }
     if (tabLink.length === 0) return;
-
     // Find related link for old tab
     var oldTabLink;
     if (oldTab && oldTab.length > 0) {
@@ -61,10 +55,8 @@ app.showTab = function (tab, tabLink) {
             });
         }
     }
-
     // Update links' classes
     if (tabLink && tabLink.length > 0) tabLink.addClass('active');
     if (oldTabLink && oldTabLink.length > 0) oldTabLink.removeClass('active');
-    
     return true;
 };

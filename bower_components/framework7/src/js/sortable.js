@@ -1,6 +1,6 @@
 /*===============================================================================
-************   Sortable   ************
-===============================================================================*/
+ ************   Sortable   ************
+ ===============================================================================*/
 app.sortableToggle = function (sortableContainer) {
     sortableContainer = $(sortableContainer);
     if (sortableContainer.length === 0) sortableContainer = $('.list-block.sortable');
@@ -29,7 +29,7 @@ app.sortableClose = function (sortableContainer) {
 };
 app.initSortable = function () {
     var isTouched, isMoved, touchStartY, touchesDiff, sortingEl, sortingItems, minTop, maxTop, insertAfter, insertBefore, sortableContainer;
-    
+
     function handleTouchStart(e) {
         isMoved = false;
         isTouched = true;
@@ -41,6 +41,7 @@ app.initSortable = function () {
         e.preventDefault();
         app.allowsPanelOpen = app.allowSwipeout = false;
     }
+
     function handleTouchMove(e) {
         if (!isTouched || !sortingEl) return;
         var pageX = e.type === 'touchmove' ? e.targetTouches[0].pageX : e.pageX;
@@ -50,10 +51,8 @@ app.initSortable = function () {
             sortableContainer.addClass('sortable-sorting');
             minTop = sortingEl[0].offsetTop;
             maxTop = sortingEl.parent().height() - sortingEl[0].offsetTop - sortingEl.height();
-            
         }
         isMoved = true;
-
         e.preventDefault();
         e.f7PreventPanelSwipe = true;
         touchesDiff = pageY - touchStartY;
@@ -61,16 +60,13 @@ app.initSortable = function () {
         if (translate < -minTop) translate = -minTop;
         if (translate > maxTop) translate = maxTop;
         sortingEl.transform('translate3d(0,' + translate + 'px,0)');
-
         insertBefore = insertAfter = undefined;
-
         sortingItems.each(function () {
             var currentEl = $(this);
             if (currentEl[0] === sortingEl[0]) return;
             var currentElOffset = currentEl[0].offsetTop;
             var currentElHeight = currentEl.height();
             var sortingElOffset = sortingEl[0].offsetTop + translate;
-
             if ((sortingElOffset >= currentElOffset - currentElHeight / 2) && sortingEl.index() < currentEl.index()) {
                 currentEl.transform('translate3d(0,-100%,0)');
                 insertAfter = currentEl;
@@ -86,6 +82,7 @@ app.initSortable = function () {
             }
         });
     }
+
     function handleTouchEnd(e) {
         app.allowsPanelOpen = app.allowSwipeout = true;
         if (!isTouched || !isMoved) {
@@ -109,6 +106,7 @@ app.initSortable = function () {
         isTouched = false;
         isMoved = false;
     }
+
     $(document).on(app.touchEvents.start, '.list-block.sortable .sortable-handler', handleTouchStart);
     if (app.support.touch) {
         $(document).on(app.touchEvents.move, '.list-block.sortable .sortable-handler', handleTouchMove);
@@ -118,5 +116,4 @@ app.initSortable = function () {
         $(document).on(app.touchEvents.move, handleTouchMove);
         $(document).on(app.touchEvents.end, handleTouchEnd);
     }
-        
 };

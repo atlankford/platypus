@@ -16,15 +16,12 @@ $.ajax = function (options) {
         contentType: 'application/x-www-form-urlencoded',
         timeout: 0 // 0s JSONp timeout
     };
-
     //For jQuery guys
     if (options.type) options.method = options.type;
-
     // Merge options and defaults
     for (var prop in defaults) {
         if (!(prop in options)) options[prop] = defaults[prop];
     }
-
     // Default URL
     if (!options.url) {
         options.url = window.location.toString();
@@ -48,27 +45,26 @@ $.ajax = function (options) {
     }
     // JSONP
     if (options.dataType === 'json' && options.url.indexOf('callback=') >= 0) {
-        
         var callbackName = 'f7jsonp_' + Date.now() + (_jsonpRequests++);
         var requestURL, abortTimeout;
         var callbackSplit = options.url.split('callback=');
         if (callbackSplit[1].indexOf('&') >= 0) {
-            var addVars = callbackSplit[1].split('&').filter(function (el) { return el.indexOf('=') > 0; }).join('&');
+            var addVars = callbackSplit[1].split('&').filter(function (el) {
+                return el.indexOf('=') > 0;
+            }).join('&');
             requestURL = callbackSplit[0] + 'callback=' + callbackName + (addVars.length > 0 ? '&' + addVars : '');
         }
         else {
             requestURL = callbackSplit[0] + 'callback=' + callbackName;
         }
-
         // Create script
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.onerror = function() {
+        script.onerror = function () {
             clearTimeout(abortTimeout);
             if (options.error) options.error();
         };
         script.src = requestURL;
-
         // Handler
         window[callbackName] = function (data) {
             clearTimeout(abortTimeout);
@@ -78,7 +74,6 @@ $.ajax = function (options) {
             delete window[callbackName];
         };
         document.querySelector('head').appendChild(script);
-
         if (options.timeout > 0) {
             abortTimeout = setTimeout(function () {
                 script.parentNode.removeChild(script);
@@ -86,24 +81,18 @@ $.ajax = function (options) {
                 if (options.error) options.error();
             }, options.timeout);
         }
-
         return;
     }
-
     // Cache for GET/HEAD requests
     if (_method === 'GET' || _method === 'HEAD') {
         if (options.cache === false) options.url += ('_nocache=' + Date.now());
     }
-
     // Create XHR
     var xhr = new XMLHttpRequest();
-
     // Open XHR
     xhr.open(_method, options.url, options.async, options.user, options.password);
-
     // Create POST Data
     var postData = null;
-    
     if ((_method === 'POST' || _method === 'PUT') && options.data) {
         if (options.processData) {
             var postDataInstances = [ArrayBuffer, Blob, Document, FormData];
@@ -114,7 +103,6 @@ $.ajax = function (options) {
             else {
                 // POST Headers
                 var boundary = '---------------------------' + Date.now().toString(16);
-
                 if (options.contentType === 'multipart\/form-data') {
                     xhr.setRequestHeader('Content-Type', 'multipart\/form-data; boundary=' + boundary);
                 }
@@ -140,38 +128,31 @@ $.ajax = function (options) {
         else {
             postData = options.data;
         }
-            
     }
-
     // Additional headers
     if (options.headers) {
         for (var header in options.headers) {
             xhr.setRequestHeader(header, options.headers[header]);
         }
     }
-
     // Check for crossDomain
     if (typeof options.crossDomain === 'undefined') {
         options.crossDomain = /^([\w-]+:)?\/\/([^\/]+)/.test(options.url) && RegExp.$2 !== window.location.host;
     }
-
     if (!options.crossDomain) {
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     }
-
     if (options.xhrFields) {
         for (var field in options.xhrFields) {
             xhr[field] = options.xhrFields[field];
         }
     }
-
     // Handle XHR
     xhr.onload = function (e) {
         if (xhr.status === 200 || xhr.status === 0) {
             $(document).trigger('ajaxSuccess', {xhr: xhr});
             if (options.success) {
                 var responseData = xhr.responseText;
-
                 if (options.dataType === 'json') responseData = JSON.parse(responseData);
                 options.success(responseData, xhr.status, xhr);
             }
@@ -184,25 +165,22 @@ $.ajax = function (options) {
         }
         $(document).trigger('ajaxComplete', {xhr: xhr});
     };
-    
     xhr.onerror = function (e) {
         $(document).trigger('ajaxError', {xhr: xhr});
         if (options.error) options.error(xhr);
     };
-
     // Ajax start callback
     if (options.start) options.start(xhr);
-
     // Send XHR
     $(document).trigger('ajaxStart', {xhr: xhr});
     xhr.send(postData);
-
     // Return XHR object
     return xhr;
 };
 // Shrotcuts
 (function () {
     var methods = ('get post getJSON').split(' ');
+
     function createMethod(method) {
         $[method] = function (url, data, success) {
             return $.ajax({
@@ -214,6 +192,7 @@ $.ajax = function (options) {
             });
         };
     }
+
     for (var i = 0; i < methods.length; i++) {
         createMethod(methods[i]);
     }

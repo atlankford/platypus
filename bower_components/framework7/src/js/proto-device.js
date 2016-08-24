@@ -1,18 +1,15 @@
 /*===========================
-Device/OS Detection
-===========================*/
+ Device/OS Detection
+ ===========================*/
 Framework7.prototype.device = (function () {
     var device = {};
     var ua = navigator.userAgent;
     var $ = Dom7;
-
     var android = ua.match(/(Android);?[\s\/]+([\d.]+)?/);
     var ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
     var ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
     var iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/);
-
     device.ios = device.android = device.iphone = device.ipad = false;
-    
     // Android
     if (android) {
         device.os = 'android';
@@ -42,19 +39,16 @@ Framework7.prototype.device = (function () {
             device.osVersion = ua.toLowerCase().split('version/')[1].split(' ')[0];
         }
     }
-
     // Webview
     device.webView = (iphone || ipad || ipod) && ua.match(/.*AppleWebKit(?!.*Safari)/i);
-        
     // Minimal UI
     if (device.os && device.os === 'ios') {
         var osVersionArr = device.osVersion.split('.');
         device.minimalUi = !device.webView &&
-                            (ipod || iphone) &&
-                            (osVersionArr[0] * 1 === 7 ? osVersionArr[1] * 1 >= 1 : osVersionArr[0] * 1 > 7) &&
-                            $('meta[name="viewport"]').length > 0 && $('meta[name="viewport"]').attr('content').indexOf('minimal-ui') >= 0;
+            (ipod || iphone) &&
+            (osVersionArr[0] * 1 === 7 ? osVersionArr[1] * 1 >= 1 : osVersionArr[0] * 1 > 7) &&
+            $('meta[name="viewport"]').length > 0 && $('meta[name="viewport"]').attr('content').indexOf('minimal-ui') >= 0;
     }
-
     // Check for status bar and fullscreen app mode
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -65,16 +59,13 @@ Framework7.prototype.device = (function () {
     else {
         device.statusBar = false;
     }
-
     // Classes
     var classNames = [];
-
     // Pixel Ratio
     device.pixelRatio = window.devicePixelRatio || 1;
     if (device.pixelRatio >= 2) {
         classNames.push('retina');
     }
-
     // OS classes
     if (device.os) {
         classNames.push(device.os, device.os + '-' + device.osVersion.split('.')[0], device.os + '-' + device.osVersion.replace(/\./g, '-'));
@@ -84,7 +75,6 @@ Framework7.prototype.device = (function () {
                 classNames.push('ios-gt-' + i);
             }
         }
-        
     }
     // Status bar classes
     if (device.statusBar) {
@@ -93,10 +83,8 @@ Framework7.prototype.device = (function () {
     else {
         $('html').removeClass('with-statusbar-overlay');
     }
-
     // Add html classes
     if (classNames.length > 0) $('html').addClass(classNames.join(' '));
-
     // Export object
     return device;
 })();

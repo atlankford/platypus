@@ -1,6 +1,6 @@
 /*======================================================
-************   Modals   ************
-======================================================*/
+ ************   Modals   ************
+ ======================================================*/
 var _modalTemplateTempDiv = document.createElement('div');
 app.modal = function (params) {
     params = params || {};
@@ -22,13 +22,9 @@ app.modal = function (params) {
         var noButtons = !params.buttons || params.buttons.length === 0 ? 'modal-no-buttons' : '';
         modalHTML = '<div class="modal ' + noButtons + '"><div class="modal-inner">' + (titleHTML + textHTML + afterTextHTML) + '</div><div class="modal-buttons">' + buttonsHTML + '</div></div>';
     }
-    
     _modalTemplateTempDiv.innerHTML = modalHTML;
-
     var modal = $(_modalTemplateTempDiv).children();
-
     $('body').append(modal[0]);
-    
     // Add events on buttons
     modal.find('.modal-button').each(function (index, el) {
         $(el).on('click', function (e) {
@@ -48,7 +44,9 @@ app.alert = function (text, title, callbackOk) {
     return app.modal({
         text: text || '',
         title: typeof title === 'undefined' ? app.params.modalTitle : title,
-        buttons: [ {text: app.params.modalButtonOk, bold: true, onClick: callbackOk} ]
+        buttons: [
+            {text: app.params.modalButtonOk, bold: true, onClick: callbackOk}
+        ]
     });
 };
 app.confirm = function (text, title, callbackOk, callbackCancel) {
@@ -165,7 +163,7 @@ app.actions = function (target, params) {
     if (arguments.length === 1) {
         // Actions
         params = target;
-    } 
+    }
     else {
         // Popover
         if (app.device.ios) {
@@ -176,29 +174,28 @@ app.actions = function (target, params) {
         }
     }
     params = params || [];
-    
     if (params.length > 0 && !$.isArray(params[0])) {
         params = [params];
     }
     var modalHTML;
     if (toPopover) {
-        var actionsPopoverTemplate = 
+        var actionsPopoverTemplate =
             '<div class="popover actions-popover">' +
-              '<div class="popover-inner">' +
-                '{{#each this}}' +
-                '<div class="list-block">' +
-                  '<ul>' +
-                    '{{#each this}}' +
-                    '{{#if label}}' +
-                    '<li class="actions-popover-label {{#if color}}color-{{color}}{{/if}} {{#if bold}}actions-popover-bold{{/if}}">{{text}}</li>' +
-                    '{{else}}' +
-                    '<li><a href="#" class="item-link list-button {{#if color}}color-{{color}}{{/if}} {{#if bold}}actions-popover-bold{{/if}}">{{text}}</a></li>' +
-                    '{{/if}}' +
-                    '{{/each}}' +
-                  '</ul>' +
-                '</div>' +
-                '{{/each}}' +
-              '</div>' +
+            '<div class="popover-inner">' +
+            '{{#each this}}' +
+            '<div class="list-block">' +
+            '<ul>' +
+            '{{#each this}}' +
+            '{{#if label}}' +
+            '<li class="actions-popover-label {{#if color}}color-{{color}}{{/if}} {{#if bold}}actions-popover-bold{{/if}}">{{text}}</li>' +
+            '{{else}}' +
+            '<li><a href="#" class="item-link list-button {{#if color}}color-{{color}}{{/if}} {{#if bold}}actions-popover-bold{{/if}}">{{text}}</a></li>' +
+            '{{/if}}' +
+            '{{/each}}' +
+            '</ul>' +
+            '</div>' +
+            '{{/each}}' +
+            '</div>' +
             '</div>';
         if (!app._compiledTemplates.actionsPopover) {
             app._compiledTemplates.actionsPopover = t7.compile(actionsPopoverTemplate);
@@ -234,7 +231,6 @@ app.actions = function (target, params) {
         groupSelector = '.actions-modal-group';
         buttonSelector = '.actions-modal-button';
     }
-    
     var groups = modal.find(groupSelector);
     groups.each(function (index, el) {
         var groupIndex = index;
@@ -244,7 +240,6 @@ app.actions = function (target, params) {
             var clickTarget;
             if (!toPopover && $(el).is(buttonSelector)) clickTarget = $(el);
             if (toPopover && $(el).find(buttonSelector).length > 0) clickTarget = $(el).find(buttonSelector);
-
             if (clickTarget) {
                 clickTarget.on('click', function (e) {
                     if (buttonParams.close !== false) app.closeModal(modal);
@@ -275,15 +270,13 @@ app.popover = function (modal, target, removeOnClose) {
         modal.append('<div class="popover-angle"></div>');
     }
     modal.show();
-
     function sizePopover() {
         modal.css({left: '', top: ''});
-        var modalWidth =  modal.width();
-        var modalHeight =  modal.height(); // 13 - height of angle
+        var modalWidth = modal.width();
+        var modalHeight = modal.height(); // 13 - height of angle
         var modalAngle = modal.find('.popover-angle');
         var modalAngleSize = modalAngle.width() / 2;
         modalAngle.removeClass('on-left on-right on-top on-bottom').css({left: '', top: ''});
-
         var targetWidth = target.outerWidth();
         var targetHeight = target.outerHeight();
         var targetOffset = target.offset();
@@ -291,16 +284,13 @@ app.popover = function (modal, target, removeOnClose) {
         if (targetParentPage.length > 0) {
             targetOffset.top = targetOffset.top - targetParentPage[0].scrollTop;
         }
-
         var windowHeight = $(window).height();
         var windowWidth = $(window).width();
-
         var modalTop = 0;
         var modalLeft = 0;
         var diff = 0;
         // Top Position
         var modalPosition = 'top';
-
         if ((modalHeight + modalAngleSize) < targetOffset.top) {
             // On top
             modalTop = targetOffset.top - modalHeight - modalAngleSize;
@@ -347,21 +337,18 @@ app.popover = function (modal, target, removeOnClose) {
             }
             modalAngle.css({top: (modalHeight / 2 - modalAngleSize + diff) + 'px'});
         }
-
         // Apply Styles
         modal.css({top: modalTop + 'px', left: modalLeft + 'px'});
     }
-    sizePopover();
 
+    sizePopover();
     $(window).on('resize', sizePopover);
     modal.on('close', function () {
         $(window).off('resize', sizePopover);
     });
-    
     if (modal.find('.' + app.params.viewClass).length > 0) {
         app.sizeNavbars(modal.find('.' + app.params.viewClass)[0]);
     }
-
     app.openModal(modal);
     return modal[0];
 };
@@ -399,12 +386,10 @@ app.loginScreen = function (modal) {
 };
 app.openModal = function (modal) {
     modal = $(modal);
-
     var isPopover = modal.hasClass('popover');
     var isPopup = modal.hasClass('popup');
     var isLoginScreen = modal.hasClass('login-screen');
-    if (!isPopover && !isPopup && !isLoginScreen) modal.css({marginTop: - Math.round(modal.outerHeight() / 2) + 'px'});
-
+    if (!isPopover && !isPopup && !isLoginScreen) modal.css({marginTop: -Math.round(modal.outerHeight() / 2) + 'px'});
     var overlay;
     if (!isLoginScreen) {
         if ($('.modal-overlay').length === 0 && !isPopup) {
@@ -415,13 +400,10 @@ app.openModal = function (modal) {
         }
         overlay = isPopup ? $('.popup-overlay') : $('.modal-overlay');
     }
-
     //Make sure that styles are applied, trigger relayout;
     var clientLeft = modal[0].clientLeft;
-
     // Trugger open event
     modal.trigger('open');
-
     // Classes for transition in
     if (!isLoginScreen) overlay.addClass('modal-overlay-visible');
     modal.removeClass('modal-out').addClass('modal-in').transitionEnd(function (e) {
@@ -438,24 +420,19 @@ app.closeModal = function (modal) {
     var isPopover = modal.hasClass('popover');
     var isPopup = modal.hasClass('popup');
     var isLoginScreen = modal.hasClass('login-screen');
-
     var removeOnClose = modal.hasClass('remove-on-close');
-
     var overlay = isPopup ? $('.popup-overlay') : $('.modal-overlay');
     if (isPopup && modal.length === $('.popup.modal-in').length) {
-        overlay.removeClass('modal-overlay-visible');    
+        overlay.removeClass('modal-overlay-visible');
     }
     else {
         overlay.removeClass('modal-overlay-visible');
     }
-
     modal.trigger('close');
-
     if (!isPopover) {
         modal.removeClass('modal-in').addClass('modal-out').transitionEnd(function (e) {
             if (modal.hasClass('modal-out')) modal.trigger('closed');
             else modal.trigger('opened');
-            
             if (isPopup || isLoginScreen) {
                 modal.removeClass('modal-out').hide();
                 if (removeOnClose && modal.length > 0) {
